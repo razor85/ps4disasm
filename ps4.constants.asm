@@ -1847,6 +1847,20 @@ ButtonCamp_Mask =  1<<ButtonCamp	; $40
 ButtonStart_Mask =  1<<ButtonStart	; $80
 ; ---------------------------------------------------------------------------
 
+; ---------------------------------------------------------------------------
+; Facing directions
+FacingDir_Down  = 0 
+FacingDir_Up    = 4
+FacingDir_Right = 8
+FacingDir_Left  = $C
+
+; ---------------------------------------------------------------------------
+; Battle commands
+Command_Attack  = 1
+Command_Tech    = 2
+Command_Skill = 3
+Command_Item  = 4
+Command_Defense  = 5
 
 ; ---------------------------------------------------------------------------
 ; Address Constants
@@ -1961,9 +1975,10 @@ Character_2 = ramaddr($FFFFC040)
 Character_3 = ramaddr($FFFFC080)
 Character_4 = ramaddr($FFFFC0C0)
 Character_5 = ramaddr($FFFFC100)
-Field_Obj_Red_Cursor = ramaddr($FFFFC280)
-Field_Obj_Scroll_Arrow = ramaddr($FFFFC2C0)
+Red_Cursor = ramaddr($FFFFC280)
+Text_Scroll_Arrow = ramaddr($FFFFC2C0)
 Field_Obj_Secondary = ramaddr($FFFFC300)	; all objects except the characters, the red cursor and scroll text arrow are stored here
+Alys_Piata = ramaddr($FFFFC4C0)
 
 Battle_Objects_Memory = ramaddr($FFFFD000)
 Command_Cursor = ramaddr($FFFFD000)
