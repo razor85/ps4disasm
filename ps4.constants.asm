@@ -92,7 +92,8 @@ facing_dir = 6	; 0 = DOWN;    4 = UP;     8 = RIGHT;    $C = LEFT
 mappings_idx = $10	; index for Sprite mappings
 offscreen_flag = $12 ; 0 = on-screen; 1 = off-screen
 dialogue_id = $14 ; ID of dialogue
-art_ptr = $18
+art_tile = $16		; tile number in VRAM
+art_ptr = $18		; ROM art pointer
 x_change_constant = $20	; constant that changes objects' x position when moving; value is generally 2 or $FFFE
 y_change_constant = $24	; constant that changes objects' y position when moving; value is generally 2 or $FFFE
 x_step_duration = $28	; updates characters' x position (one step) automatically until it becomes 0; it's generally 16 when moving from one tile to another
@@ -1978,6 +1979,7 @@ Character_5 = ramaddr($FFFFC100)
 Red_Cursor = ramaddr($FFFFC280)
 Text_Scroll_Arrow = ramaddr($FFFFC2C0)
 Field_Obj_Secondary = ramaddr($FFFFC300)	; all objects except the characters, the red cursor and scroll text arrow are stored here
+Hahn_Near_Basement = ramaddr($FFFFC300)
 Alys_Piata = ramaddr($FFFFC4C0)
 
 Battle_Objects_Memory = ramaddr($FFFFD000)
