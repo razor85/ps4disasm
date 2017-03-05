@@ -6,56 +6,56 @@
 ; Characters, vehicles and enemies statistics (not all of the below are applicable to both)
 ;
 ; 'mod' means a stat modified by equipment
-profession = 6
-level = 8
-exp = $A
-curr_hp = $E
-max_hp = $10
-curr_tp = $12
-max_tp = $14
-status = $16		; bit 0 = poisoned; bit 1 = paralyzed; bit 2 = dead
-strength = $18
-strength_mod = $19
-strength_battle = $1A
-mental = $1B
-mental_mod = $1C
-mental_battle = $1D
-agility = $1E
-agility_mod = $1F
-agility_battle = $20
-dexterity = $21
-dexterity_mod = $22
-dexterity_battle = $23
-atk_pow = $24
-atk_pow_battle = $26
-dfs_pow = $28
-dfs_pow_battle = $2A
-magic_dfs = $2C
-magic_dfs_battle = $2E
-physical_prop = $30
-energy_prop = $32
-fire_prop = $34
-grav_prop = $36
-water_prop = $38
-antievil_prop = $3A
-electric_prop = $3C
-holyword_prop = $3E
-brose_prop = $40
-bio_prop = $42
-psy_prop = $44
-mech_prop = $46
-efess_prop = $48
-destroy_prop = $4A
+profession = 6	; word
+level = 8		; word
+exp = $A		; longword
+curr_hp = $E	; word
+max_hp = $10	; word
+curr_tp = $12	; word
+max_tp = $14	; word
+status = $16		; byte ; bit 0 = poisoned; bit 1 = paralyzed; bit 2 = dead
+strength = $18		; byte
+strength_mod = $19	; byte
+strength_battle = $1A	; byte
+mental = $1B			; byte
+mental_mod = $1C		; byte
+mental_battle = $1D		; byte
+agility = $1E			; byte
+agility_mod = $1F		; byte
+agility_battle = $20	; byte
+dexterity = $21			; byte
+dexterity_mod = $22		; byte
+dexterity_battle = $23	; byte
+atk_pow = $24			; word
+atk_pow_battle = $26	; word
+dfs_pow = $28			; word
+dfs_pow_battle = $2A	; word
+magic_dfs = $2C			; word
+magic_dfs_battle = $2E	; word
+physical_prop = $30		; word
+energy_prop = $32		; word
+fire_prop = $34			; word
+grav_prop = $36			; word
+water_prop = $38		; word
+antievil_prop = $3A		; word
+electric_prop = $3C		; word
+holyword_prop = $3E		; word
+brose_prop = $40		; word
+bio_prop = $42			; word
+psy_prop = $44			; word
+mech_prop = $46			; word
+efess_prop = $48		; word
+destroy_prop = $4A		; word
 equipment = $4C
-right_hand = $4C
-left_hand = $4D
-head = $4E
-body = $4F
+right_hand = $4C		; byte
+left_hand = $4D			; byte
+head = $4E				; byte
+body = $4F				; byte
 techs = $52
 skills = $62
 curr_skill_uses = $6A
 max_skill_uses = $6B
-gain_exp_flag = $7A		; flag which is set if a character participates and wins a battle at least once. After that characters start gaining experience even if they are not in the party
+gain_exp_flag = $7A		; byte ; flag which is set if a character participates and wins a battle at least once. After that characters start gaining experience even if they are not in the party
 ; ---------------------------------------------------------------------------
 
 ; ---------------------------------------------------------------------------
@@ -77,62 +77,77 @@ StatusTechSealed_Mask =  1<<StatusTechSealed	; $10
 StatusAsleep2_Mask =  1<<StatusAsleep2	; $20
 StatusAndroidDead_Mask =  1<<StatusAndroidDead	; $40
 ; ---------------------------------------------------------------------------
-; Properties applicable to both field and battle objects
+; Properties and constants applicable to both field and battle objects
 obj_id = 0
-render_flags = 2
-mappings_addr = 8
-mappings = $C
-mappings_duration = $11
-timer = $1C
+render_flags = 2	; byte
+mappings_addr = 8	; longword
+mappings = $C		; longword
+mappings_duration = $11	; byte
+timer = $1C			; word
+
+obj_size = $40
+next_obj = $40
 ; ---------------------------------------------------------------------------
 
 ; ---------------------------------------------------------------------------
 ; Common field object properties
-facing_dir = 6	; 0 = DOWN;    4 = UP;     8 = RIGHT;    $C = LEFT
-mappings_idx = $10	; index for Sprite mappings
-offscreen_flag = $12 ; 0 = on-screen; 1 = off-screen
-dialogue_id = $14 ; ID of dialogue
-art_tile = $16		; tile number in VRAM
-art_ptr = $18		; ROM art pointer
-x_change_constant = $20	; constant that changes objects' x position when moving; value is generally 2 or $FFFE
-y_change_constant = $24	; constant that changes objects' y position when moving; value is generally 2 or $FFFE
-x_step_duration = $28	; updates characters' x position (one step) automatically until it becomes 0; it's generally 16 when moving from one tile to another
-y_step_duration = $2A	; updates characters' y position (one step) automatically until it becomes 0; it's generally 16 when moving from one tile to another
-x_pos_camera_delta = $2C	; difference between object's x position + $80 and H scroll value
-y_pos_camera_delta = $2E	; difference between object's y position + $80 and V scroll value
-curr_x_pos = $30
-curr_y_pos = $34
-dest_x_pos = $38	; used as destination when updating objects' x position
-dest_y_pos = $3A	; used as destination when updating objects' y position
-x_max_move_boundary = $3C	; boundary which NPC's cannot move past when randomly updating their x position
-y_max_move_boundary = $3D	; boundary which NPC's cannot move past when randomly updating their y position
-x_move_boundary = $3E	; number of steps NPC's can take between 0 and the max boundary (x position)
-y_move_boundary = $3F	; number of steps NPC's can take between 0 and the max boundary (y position)
+facing_dir = 6	; word ; 0 = DOWN;    4 = UP;     8 = RIGHT;    $C = LEFT
+mappings_idx = $10	; byte ; index for Sprite mappings
+offscreen_flag = $12 ; byte ; 0 = on-screen; 1 = off-screen
+dialogue_id = $14 ; byte ; ID of dialogue
+art_tile = $16		; word ; tile number in VRAM
+art_ptr = $18		; longword ; ROM art pointer
+x_step_constant = $20	; longword ; constant that changes objects' x position when moving; value is generally 2 or $FFFE
+y_step_constant = $24	; longword ; constant that changes objects' y position when moving; value is generally 2 or $FFFE
+x_step_duration = $28	; word ; updates characters' x position (one step) automatically until it becomes 0; it's generally 16 when moving from one tile to another
+y_step_duration = $2A	; word ; updates characters' y position (one step) automatically until it becomes 0; it's generally 16 when moving from one tile to another
+x_pos_camera_delta = $2C	;  word ; difference between object's x position + $80 and H scroll value
+y_pos_camera_delta = $2E	; word ; difference between object's y position + $80 and V scroll value
+curr_x_pos = $30	; longword
+curr_y_pos = $34	; longword
+dest_x_pos = $38	; word ; used as destination when updating objects' x position
+dest_y_pos = $3A	; word ; used as destination when updating objects' y position
+x_max_move_boundary = $3C	; byte ; boundary which NPC's cannot move past when randomly updating their x position
+y_max_move_boundary = $3D	; byte ; boundary which NPC's cannot move past when randomly updating their y position
+x_move_boundary = $3E	; byte ; number of steps NPC's can take between 0 and the max boundary (x position)
+y_move_boundary = $3F	; byte ; number of steps NPC's can take between 0 and the max boundary (y position)
 ; ---------------------------------------------------------------------------
 
 ; ---------------------------------------------------------------------------
 ; Battle objects offsets
-battle_mappings_idx = 6
-sound = 6
-sound_length = 8
-routine = $14
-battle_x_pos = $2C
-battle_y_pos = $2E
-parent = $3C
+battle_mappings_idx = 6	; word
+sound = 6				; byte
+sound_length = 8		; word
+routine = $14			; word
+battle_x_pos = $2C		; word
+battle_y_pos = $2E		; word
+parent = $3C			; longword
 ; ---------------------------------------------------------------------------
 
 ; ---------------------------------------------------------------------------
 ; Fighters offsets
-fighter_routine = 2
-stats_addr = 4
-fighter_x_pos = $C
-vdp_dest_addr = $E
-fighter_id = $12	; characters and enemies ID; characters' ID start from 1
-ability = $24
-palette_obj = $26
-right_weapon = $2C	; weapon ID (see 'Battle_WeaponIndexes' in the disassembly)
-left_weapon = $2D
-action_routine = $32
+fighter_routine = 2		; word
+stats_addr = 4			; longword
+fighter_x_pos = $C		; word
+vdp_dest_addr = $E		; word
+fighter_id = $12	; word ; characters and enemies ID; characters' ID start from 1
+ability = $24		; word
+palette_obj = $26	; longword
+right_weapon = $2C	; byte ; weapon ID (see 'Battle_WeaponIndexes' in the disassembly)
+left_weapon = $2D	; byte ;
+action_routine = $32	; word
+; ---------------------------------------------------------------------------
+
+
+; ---------------------------------------------------------------------------
+; Enemy sprites properties and constants
+enm_spr_map_idx = 4
+enm_spr_map_addr = 6
+enm_spr_frame = $E
+enm_spr_frame_timer = $F
+enm_spr_obj_id = $1C
+
+enemy_sprite_size = $20
 ; ---------------------------------------------------------------------------
 
 
@@ -2028,6 +2043,8 @@ Nem_Patterns_Left = ramaddr($FFFFE458)
 Saved_Nem_Frame_Patterns_Left = ramaddr($FFFFE45A)
 Nem_Frame_Patterns_Left = ramaddr($FFFFE484)
 
+Enemy_Sprites = ramaddr($FFFFEA00)
+
 Game_Mode_Routine = ramaddr($FFFFEC20)
 
 Routine_Exit_Flags = ramaddr($FFFFEC27)	; determines what to do when field routine is about to finish
@@ -2172,12 +2189,12 @@ Saved_Field_Map_Index_2 = ramaddr($FFFFF402)
 Saved_Field_Map_Index = ramaddr($FFFFF404)
 Saved_Char_X_Pos = ramaddr($FFFFF406)
 Saved_Char_Y_Pos = ramaddr($FFFFF408)
-Char_ID_Mem_Start = ramaddr($FFFFF40A)
-Char_ID_Mem_1 = ramaddr($FFFFF40A)
-Char_ID_Mem_2 = ramaddr($FFFFF40B)
-Char_ID_Mem_3 = ramaddr($FFFFF40C)
-Char_ID_Mem_4 = ramaddr($FFFFF40D)
-Char_ID_Mem_5 = ramaddr($FFFFF40E)
+Current_Party_Slots = ramaddr($FFFFF40A)
+Current_Party_Slot_1 = ramaddr($FFFFF40A)
+Current_Party_Slot_2 = ramaddr($FFFFF40B)
+Current_Party_Slot_3 = ramaddr($FFFFF40C)
+Current_Party_Slot_4 = ramaddr($FFFFF40D)
+Current_Party_Slot_5 = ramaddr($FFFFF40E)
 Char_ID_Mem_End = ramaddr($FFFFF40F)
 
 Inventory = ramaddr($FFFFF410)
