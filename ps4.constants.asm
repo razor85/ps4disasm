@@ -128,9 +128,11 @@ parent = $3C			; longword
 ; Fighters offsets
 fighter_routine = 2		; word
 stats_addr = 4			; longword
+fighter_art_ptrs = 8		; longword
 fighter_x_pos = $C		; word
 vdp_dest_addr = $E		; word
 fighter_id = $12	; word ; characters and enemies ID; characters' ID start from 1
+fighter_pal_line = $1E
 ability = $24		; word
 palette_obj = $26	; longword
 right_weapon = $2C	; byte ; weapon ID (see 'Battle_WeaponIndexes' in the disassembly)
@@ -150,6 +152,16 @@ enm_spr_obj_id = $1C
 enemy_sprite_size = $20
 ; ---------------------------------------------------------------------------
 
+; ---------------------------------------------------------------------------
+; Palette objects properties and constants
+pal_obj_frame_timer = 2
+pal_obj_frame = 3
+pal_line_offs = 4
+pal_obj_data_addr = 8
+pal_table_offs_addr = $C
+
+palette_obj_size = $10
+; ---------------------------------------------------------------------------
 
 ; ---------------------------------------------------------------------------
 ; Offsets specific to treasure chests
