@@ -87,6 +87,7 @@ timer = $1C			; word
 
 obj_size = $40
 next_obj = $40
+prev_obj = -$40
 ; ---------------------------------------------------------------------------
 
 ; ---------------------------------------------------------------------------
@@ -1966,6 +1967,8 @@ Battle_Item_Index = ramaddr($FFFF41C4)		; index of item selected (this is the cu
 Battle_Macro_Index = ramaddr($FFFF41D6)
 
 Enemy_Formation_Data = ramaddr($FFFF41F0)
+Item_Drop_Rate = ramaddr($FFFF41F2)
+Dropped_Item = ramaddr($FFFF41F3)
 
 Enemy_Stats = ramaddr($FFFF4200)
 Enemy_Stats_2 = ramaddr($FFFF4280)
