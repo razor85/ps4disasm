@@ -1957,6 +1957,7 @@ Current_Target_Index = ramaddr($FFFF4144)
 Current_Command = ramaddr($FFFF4146)
 Fighters_Hit_Flags = ramaddr($FFFF4150)	; $00 = normal attack; $01 = critical hit; $FF = not being targeted or miss
 Battle_Item_List = ramaddr($FFFF4152)
+Battle_Ability_Range = ramaddr($FFFF4182)	; range (e.g. single target) of techniques and skills
 Battle_Main_Option_Index = ramaddr($FFFF41A0)	; index of the 3 main battle options (COMD, MACR, RUN); it's also the index for displaying each stat message upon level-up
 Battle_Char_Comd_Index = ramaddr($FFFF41A2)
 Battle_Enemy_Index = ramaddr($FFFF41AC)		; index of target enemy
@@ -2150,6 +2151,8 @@ Saved_Char_ID_Mem_4 = ramaddr($FFFFED57)
 Saved_Char_ID_Mem_5 = ramaddr($FFFFED58)
 
 Battle_Priority = ramaddr($FFFFEE45)	; 0 = normal; 1 = surprise attack; $FF = ambush
+
+Ability_Effect_Type = ramaddr($FFFFEE4A)	; word ;
 
 Close_Range_Wpn_Sound = ramaddr($FFFFEE61)
 
