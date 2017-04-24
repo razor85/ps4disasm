@@ -79,7 +79,7 @@ StatusAndroidDead_Mask =  1<<StatusAndroidDead	; $40
 ; ---------------------------------------------------------------------------
 ; Properties and constants applicable to both field and battle objects
 obj_id = 0
-render_flags = 2	; byte
+render_flags = 2	; byte	; bit 2 = if set, animation is finished
 mappings_addr = 8	; longword
 mappings = $C		; longword
 mappings_duration = $11	; byte
@@ -1952,12 +1952,14 @@ Battle_Command_Data = ramaddr($FFFF410A)		; 4 bytes per character; values are as
 Battle_Tech_List = ramaddr($FFFF412E)
 Current_Turn_Number = ramaddr($FFFF4140)
 Battle_Skill_List = ramaddr($FFFF4142)
-Current_Actor_Index = ramaddr($FFFF4142)
-Current_Target_Index = ramaddr($FFFF4144)
+Current_Actor_Index = ramaddr($FFFF4142)	; word
+Current_Target_Index = ramaddr($FFFF4144)	; word
 Current_Command = ramaddr($FFFF4146)
 Fighters_Hit_Flags = ramaddr($FFFF4150)	; $00 = normal attack; $01 = critical hit; $FF = not being targeted or miss
 Battle_Item_List = ramaddr($FFFF4152)
+Battle_Ability_Effects = ramaddr($FFFF4170) ; if 0 the effect for a skill, technique, etc doesn't work; other numbers are the effects
 Battle_Ability_Range = ramaddr($FFFF4182)	; range (e.g. single target) of techniques and skills
+Battle_Skill_Done_Flag = ramaddr($FFFF4188)	; byte ; set to true when battle objects for skills have finished processing
 Battle_Main_Option_Index = ramaddr($FFFF41A0)	; index of the 3 main battle options (COMD, MACR, RUN); it's also the index for displaying each stat message upon level-up
 Battle_Char_Comd_Index = ramaddr($FFFF41A2)
 Battle_Enemy_Index = ramaddr($FFFF41AC)		; index of target enemy
