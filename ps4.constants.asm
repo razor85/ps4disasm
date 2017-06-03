@@ -1968,6 +1968,7 @@ Battle_Char_Index = ramaddr($FFFF41B8)		; index of target character
 Battle_Skill_Index = ramaddr($FFFF41BA)		; index of skill selected (this is the cursor option, not the ID of the skill)
 Battle_Item_Index = ramaddr($FFFF41C4)		; index of item selected (this is the cursor option, not the ID of the Item)
 Battle_Macro_Index = ramaddr($FFFF41D6)
+Battle_Macro_Flag = ramaddr($FFFF41D8)		; set if a macro is going on
 
 Enemy_Formation_Data = ramaddr($FFFF41F0)
 Item_Drop_Rate = ramaddr($FFFF41F2)
@@ -2157,6 +2158,13 @@ Battle_Priority = ramaddr($FFFFEE45)	; 0 = normal; 1 = surprise attack; $FF = am
 Ability_Effect_Type = ramaddr($FFFFEE4A)	; word ;
 
 Close_Range_Wpn_Sound = ramaddr($FFFFEE61)
+
+Macro_Item_Slots = ramaddr($FFFFEE6A)
+Macro_Item_Slot_1 = ramaddr($FFFFEE6A)	; inventory index of item used in a macro (character 1)
+Macro_Item_Slot_2 = ramaddr($FFFFEE6B)	; inventory index of item used in a macro (character 2)
+Macro_Item_Slot_3 = ramaddr($FFFFEE6C)	; inventory index of item used in a macro (character 3)
+Macro_Item_Slot_4 = ramaddr($FFFFEE6D)	; inventory index of item used in a macro (character 4)
+Macro_Item_Slot_5 = ramaddr($FFFFEE6E)	; inventory index of item used in a macro (character 5)
 
 Saved_Sound_Index_2 = ramaddr($FFFFEEE0)
 Saved_Sound_Index_3 = ramaddr($FFFFEEE4)
