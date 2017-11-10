@@ -26,7 +26,7 @@ set AS_MSGPATH=AS/win32
 set USEANSI=n
 
 REM // allow the user to choose to output error messages to file by supplying the -logerrors parameter
-IF "%1"=="-logerrors" ( "AS/win32/asw.exe" -xx -c -E -A ps4.asm ) ELSE "AS/win32/asw.exe" -xx -c -E -A ps4.asm
+IF "%1"=="-logerrors" ( "AS/win32/asw.exe" -xx -c -E -A -L ps4.asm ) ELSE "AS/win32/asw.exe" -xx -c -E -A -L ps4.asm
 
 REM // if there were errors, a log file is produced
 IF EXIST ps4.log goto LABLERROR4
