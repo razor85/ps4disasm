@@ -1,6 +1,6 @@
 ; ---------------------------------------------------------------------------
 ; Constants and offsets
-; ---------------------------------------------------------------------------	
+; ---------------------------------------------------------------------------
 
 ; ---------------------------------------------------------------------------
 ; Characters, vehicles and enemies statistics (not all of the below are applicable to both)
@@ -1641,7 +1641,7 @@ EventFlag_DeVarsDefeated = $E5	; Set after defeating De-Vars
 EventFlag_SaLewsDefeated = $E6	; Set after defeating Sa-Lews
 EventFlag_AngerTowerEnd = $E7	; Set when you exit the top of the Anger Tower and Chaz reunites with his friends
 EventFlag_ProfoundDarkness = $E8	; Set when you fight Profound Darkness
-EventFlag_GuildPlaceholder = $EB	; Always cleared; used as a placeholder in the Hunters' Guild section to mean that, once a request is available, 
+EventFlag_GuildPlaceholder = $EB	; Always cleared; used as a placeholder in the Hunters' Guild section to mean that, once a request is available,
 					; you can do it anytime
 
 
@@ -1878,7 +1878,7 @@ ButtonStart_Mask =  1<<ButtonStart	; $80
 
 ; ---------------------------------------------------------------------------
 ; Facing directions
-FacingDir_Down  = 0 
+FacingDir_Down  = 0
 FacingDir_Up    = 4
 FacingDir_Right = 8
 FacingDir_Left  = $C
@@ -1909,7 +1909,7 @@ Z80_RAM_End =  $A02000	; end of non-reserved Z80 RAM
 Z80_Bus_Request =  $A11100
 Z80_Reset =  $A11200
 
-Security_Addr =  $A14000 
+Security_Addr =  $A14000
 
 ; I/O area
 HW_Version =  $A10001
