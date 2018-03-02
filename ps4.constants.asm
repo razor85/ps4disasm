@@ -1941,7 +1941,7 @@ RAM_Start = ramaddr($FFFF0000)
 
 Battle_Palette_Objects = ramaddr($FFFF2A90)
 
-Dialogue_Trees_Buffer = ramaddr($FFFF3000)
+Dialogue_Trees = ramaddr($FFFF3000)
 
 Battle_Routine = ramaddr($FFFF4100)
 Battle_Total_Comd_Input = ramaddr($FFFF4106)	; number is incremented each time a command for a character has been selected
@@ -2002,11 +2002,12 @@ System_Stack = ramaddr($FFFF4FF0)
 
 Sound_Index = ramaddr($FFFF500A)
 
-Plane_A_Buf = ramaddr($FFFF8000)
-Plane_B_Buf = ramaddr($FFFF9000)
-
-Plane_A_Tile_Data = ramaddr($FFFFA000)
-Plane_B_Tile_Data = ramaddr($FFFFB000)
+Chunk_Table = ramaddr($FFFF6000)
+Text_Buffer = ramaddr($FFFF7000)
+Plane_A_Buffer = ramaddr($FFFF8000)
+Plane_B_Buffer = ramaddr($FFFF9000)
+Map_Layout_FG = ramaddr($FFFFA000)
+Map_Layout_BG = ramaddr($FFFFB000)
 
 Field_Objects_Memory = ramaddr($FFFFC000)
 Character_1 = ramaddr($FFFFC000)
