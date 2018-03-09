@@ -122,6 +122,7 @@ sound_length = 8		; word
 routine = $14			; word
 battle_x_pos = $2C		; word
 battle_y_pos = $2E		; word
+target = $38			; longword
 parent = $3C			; longword
 ; ---------------------------------------------------------------------------
 
@@ -136,6 +137,8 @@ fighter_id = $12	; word ; characters and enemies ID; characters' ID start from 1
 fighter_pal_line = $1E
 ability = $24		; word
 palette_obj = $26	; longword
+reaction_flags	= $2A	; bitfield ; mainly for enemies, determines what attacks to use depending on some actions
+						; bit 0 = attacked physically; bit 1 = attacked magically; bit 2 = attacked with techniques; bit 3 = ambush ; bit 4 = multi-target damage
 right_weapon = $2C	; byte ; weapon ID (see 'Battle_WeaponIndexes' in the disassembly)
 left_weapon = $2D	; byte ;
 action_routine = $32	; word
