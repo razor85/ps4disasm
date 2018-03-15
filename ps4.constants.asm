@@ -102,8 +102,8 @@ x_step_constant = $20	; longword ; constant that changes objects' x position whe
 y_step_constant = $24	; longword ; constant that changes objects' y position when moving; value is generally 2 or $FFFE
 x_step_duration = $28	; word ; updates characters' x position (one step) automatically until it becomes 0; it's generally 16 when moving from one tile to another
 y_step_duration = $2A	; word ; updates characters' y position (one step) automatically until it becomes 0; it's generally 16 when moving from one tile to another
-x_screen_pos = $2C	; word
-y_screen_pos = $2E	; word
+sprite_x_pos = $2C	; word	; used for the Sprite table
+sprite_y_pos = $2E	; word	; used for the Sprite table
 curr_x_pos = $30	; longword
 curr_y_pos = $34	; longword
 dest_x_pos = $38	; word ; used as destination when updating objects' x position
@@ -2070,7 +2070,11 @@ Nem_Patterns_Left = ramaddr($FFFFE458)
 Saved_Nem_Frame_Patterns_Left = ramaddr($FFFFE45A)
 Nem_Frame_Patterns_Left = ramaddr($FFFFE484)
 
+Sprite_Queue = ramaddr($FFFFE600)
+
 Enemy_Sprites = ramaddr($FFFFEA00)
+
+Sprite_Queue_2 = ramaddr($FFFFEC00)
 
 Game_Mode_Routine = ramaddr($FFFFEC20)
 
