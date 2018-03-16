@@ -2070,11 +2070,11 @@ Nem_Patterns_Left = ramaddr($FFFFE458)
 Saved_Nem_Frame_Patterns_Left = ramaddr($FFFFE45A)
 Nem_Frame_Patterns_Left = ramaddr($FFFFE484)
 
-Sprite_Queue = ramaddr($FFFFE600)
+Sprite_Table_Input = ramaddr($FFFFE600)
 
 Enemy_Sprites = ramaddr($FFFFEA00)
 
-Sprite_Queue_2 = ramaddr($FFFFEC00)
+Sprite_Table_Input_2 = ramaddr($FFFFEC00)
 
 Game_Mode_Routine = ramaddr($FFFFEC20)
 
