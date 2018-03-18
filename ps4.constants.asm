@@ -2204,10 +2204,10 @@ VDP_Status_Reg = ramaddr($FFFFEF22)
 VInt_Frame_Count = ramaddr($FFFFEF24)
 CRAM_Update_Flag = ramaddr($FFFFEF26)
 
-V_Scroll_FG = ramaddr($FFFFEF90)
-H_Scroll_FG = ramaddr($FFFFEF94)
-V_Scroll_BG = ramaddr($FFFFEF98)
-H_Scroll_BG = ramaddr($FFFFEF9C)
+Camera_Y_Pos_FG = ramaddr($FFFFEF90)
+Camera_X_Pos_FG = ramaddr($FFFFEF94)
+Camera_Y_Pos_BG = ramaddr($FFFFEF98)
+Camera_X_Pos_BG = ramaddr($FFFFEF9C)
 
 Battle_Turn_Order = ramaddr($FFFFEFB0)	; Index and agility of characters and enemies; order is from highest to lowest agility
 											; bytes 1-2 = index; bytes 3-4 = agility
