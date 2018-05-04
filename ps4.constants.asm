@@ -1473,7 +1473,7 @@ MapID_AirCastleSpace = id(PtrMap_AirCastleSpace)	; $1A0
 
 ; Event flags
 EventFlag_PiataFirstTime = 7	; Set when Chaz is alone in Piata at the start of the game
-EventFlag_AlysFound = 8	; Set when Chaz hooks up with Alys in Piata
+EventFlag_AlysFound = 8	; Set when Chaz finds Alys in Piata
 EventFlag_PrincipalMeeting = 9	; Set after talking to the principal the first time
 EventFlag_HahnJoined = $A	; Set when Hahn joins your party for the first time
 EventFlag_Igglanova = $B	; Set when you fight the Igglanova in the Piata basement
