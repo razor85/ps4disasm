@@ -2032,27 +2032,6 @@ DMA_Commands_Buffer = ramaddr($FFFFE000)
 
 Nem_Code_Table = ramaddr($FFFFE200)
 
-Sound_Test_Option = ramaddr($FFFFE200)
-Sound_Test_Sound = ramaddr($FFFFE201)
-
-Win_Item_Count = ramaddr($FFFFE200)
-Win_Tech_Count = ramaddr($FFFFE200)
-Win_Skill_Count = ramaddr($FFFFE200)
-
-Win_Selected_Item_ID = ramaddr($FFFFE287)
-Win_Selected_Tech_ID = ramaddr($FFFFE287)
-Win_Selected_Skill_ID = ramaddr($FFFFE287)
-Win_Selected_Item_Addr = ramaddr($FFFFE288)
-Win_Selected_Tech_Addr = ramaddr($FFFFE288)
-Win_Selected_Skill_Addr = ramaddr($FFFFE288)
-Win_Selected_Item_Target = ramaddr($FFFFE28C)
-Win_Selected_Tech_Target = ramaddr($FFFFE28C)
-Win_Selected_Skill_Target = ramaddr($FFFFE28C)
-Win_Heal_Char_Num = ramaddr($FFFFE28E)	; number of characters to heal
-Win_Healing_Value = ramaddr($FFFFE290)	; healing value for characters in the party
-
-Equippable_Inventory = ramaddr($FFFFE380)	; equippable only items showing up in the list when changing equipment
-Equippable_Count = ramaddr($FFFFE3A8)
 
 Win_Char_Num = ramaddr($FFFFE3F0)	; number of characters in the menu
 Win_Saved_Char_ID = ramaddr($FFFFE3F2)
