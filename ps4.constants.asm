@@ -2166,8 +2166,10 @@ Saved_Sound_Index_4 = ramaddr($FFFFEEE6)
 Game_Mode_Index = ramaddr($FFFFEF00)
 
 Joypad_Ctrl = ramaddr($FFFFEF02)
-Joypad_Held = ramaddr($FFFFEF02)
-Joypad_Pressed = ramaddr($FFFFEF03)
+Joypad_Held = ramaddr($FFFFEF02)	; byte
+Joypad_Pressed = ramaddr($FFFFEF03)	; byte
+Button_Held_Frames = ramaddr($FFFFEF04)	; byte
+Button_Held_Timer = ramaddr($FFFFEF08)	; byte
 
 VDP_Reg1_Val = ramaddr($FFFFEF0A)
 RNG_Seed = ramaddr($FFFFEF0C)
