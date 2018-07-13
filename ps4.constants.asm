@@ -2005,7 +2005,7 @@ System_Stack = ramaddr($FFFF4FF0)
 
 Sound_Index = ramaddr($FFFF500A)
 
-Chunk_Table = ramaddr($FFFF6000)
+Chunk_Table = ramaddr($FFFF6000)	; 32x32 definitions; 32 bytes (16 words) per definition
 Text_Buffer = ramaddr($FFFF7000)
 Plane_A_Buffer = ramaddr($FFFF8000)
 Plane_B_Buffer = ramaddr($FFFF9000)
@@ -2083,13 +2083,31 @@ Map_Data_Manager_Addr = ramaddr($FFFFEC74)
 Vehicle_Boarding_Flags = ramaddr($FFFFEC7F)	; determines if you can board a vehicle on the tile you're standing on
 											; bitfield; if bit is set it means you can board the vehicle; bit 0 = Land Rover; bit 1 = Ice Digger; bit 2 = Hydrofoil
 
-Collision_Index = ramaddr($FFFFEC80)	; 0 = Empty
-										; 1 = Map change (e.g. towns, stairs)
-										; 2 = Recovery (e.g. at spaceports)
-										; 8 = Solid
-										; 9 = Water
-										; $A = Sand
-										; $B = Ice block
+Tile_Collision_Array = ramaddr($FFFFEC80)	; holds collision indexes for tiles adjacent to the leading character; one byte per direction
+											; collision indexes are as follows:
+												; 0 = Empty
+												; 1 = Map change (e.g. towns, stairs)
+												; 2 = Recovery (e.g. at spaceports)
+												; 8 = Solid
+												; 9 = Water
+												; $A = Sand
+												; $B = Ice block
+												; $C = Shop
+Tile_Collision_Standing = ramaddr($FFFFEC80)	; tile leading character is currently standing on
+Saved_Tile_Collision_Standing = ramaddr($FFFFEC81)
+Tile_Collision_Shop = ramaddr($FFFFEC82)
+Tile_Collision_Left_1 = ramaddr($FFFFEC83)
+Tile_Collision_Top_Left_1 = ramaddr($FFFFEC84)
+Tile_Collision_Up_1 = ramaddr($FFFFEC85)
+Tile_Collision_Top_Right_1 = ramaddr($FFFFEC86)
+Tile_Collision_Right = ramaddr($FFFFEC87)
+Tile_Collision_Bottom_Right = ramaddr($FFFFEC88)
+Tile_Collision_Down = ramaddr($FFFFEC89)
+Tile_Collision_Bottom_Left = ramaddr($FFFFEC8A)
+Tile_Collision_Left_2 = ramaddr($FFFFEC8B)
+Tile_Collision_Top_Left_2 = ramaddr($FFFFEC8C)
+Tile_Collision_Up_2 = ramaddr($FFFFEC8D)
+Tile_Collision_Top_Right_2 = ramaddr($FFFFEC8E)
 
 Window_Index = ramaddr($FFFFEC90)
 Saved_Window_Index = ramaddr($FFFFEC92)
