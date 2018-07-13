@@ -2005,7 +2005,7 @@ System_Stack = ramaddr($FFFF4FF0)
 
 Sound_Index = ramaddr($FFFF500A)
 
-Chunk_Table = ramaddr($FFFF6000)	; 32x32 definitions; 32 bytes (16 words) per definition
+Chunk_Table = ramaddr($FFFF6000)	; 32x32 definitions; 32 bytes (16 words) per definition; each word holds plane mappings; bit 6 is the collision flag, 0 = no collision, 1 = collision 
 Text_Buffer = ramaddr($FFFF7000)
 Plane_A_Buffer = ramaddr($FFFF8000)
 Plane_B_Buffer = ramaddr($FFFF9000)
@@ -2063,6 +2063,7 @@ Routine_Exit_Flags = ramaddr($FFFFEC27)	; determines what to do when field routi
 
 Field_Map_Index = ramaddr($FFFFEC28)
 Field_Map_Index_2 = ramaddr($FFFFEC2A)
+Map_Chunk_Addr = ramaddr($FFFFEC2C)
 Map_Update_Addr = ramaddr($FFFFEC30)
 Map_Transition_Data_Addr = ramaddr($FFFFEC34)
 Map_Transition_Data_2_Addr = ramaddr($FFFFEC38)
