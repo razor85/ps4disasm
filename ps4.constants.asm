@@ -2005,7 +2005,8 @@ System_Stack = ramaddr($FFFF4FF0)
 
 Sound_Index = ramaddr($FFFF500A)
 
-Chunk_Table = ramaddr($FFFF6000)	; 32x32 definitions; 32 bytes (16 words) per definition; each word holds plane mappings; bit 6 is the collision flag, 0 = no collision, 1 = collision 
+Chunk_Table = ramaddr($FFFF6000)	; 32x32 definitions; 32 bytes (16 words) per definition; each word holds plane mappings; bit 6 is the collision flag, 0 = no collision, 1 = collision
+									; When windows are opened, plane mappings are saved here
 Text_Buffer = ramaddr($FFFF7000)
 Plane_A_Buffer = ramaddr($FFFF8000)
 Plane_B_Buffer = ramaddr($FFFF9000)
@@ -2113,6 +2114,7 @@ Tile_Collision_Top_Right_2 = ramaddr($FFFFEC8E)
 Window_Index = ramaddr($FFFFEC90)
 Saved_Window_Index = ramaddr($FFFFEC92)
 Win_Group_Start_Addr = ramaddr($FFFFEC94)
+Win_Saved_Plane_Maps_End = ramaddr($FFFFEC98)	; word; points past all plane mappings which are saved while windows are open 
 Windows_Opened_Num = ramaddr($FFFFEC9A)
 Window_Init_Flag = ramaddr($FFFFEC9B)	; bit 0 = set if current window has been initialized
 
