@@ -2052,6 +2052,8 @@ Nem_Frame_Patterns_Left = ramaddr($FFFFE484)
 
 Sprite_Table_Input = ramaddr($FFFFE600)
 
+Tile_Anim_Memory = ramaddr($FFFFE800)	; holds definitions for tile animations; $200 bytes; $20 bytes per definition
+
 Enemy_Sprites = ramaddr($FFFFEA00)
 
 Sprite_Table_Input_2 = ramaddr($FFFFEC00)
