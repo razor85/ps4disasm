@@ -13,7 +13,7 @@ curr_hp = $E	; word
 max_hp = $10	; word
 curr_tp = $12	; word
 max_tp = $14	; word
-status = $16		; byte ; bit 0 = poisoned; bit 1 = paralyzed; bit 2 = dead
+status = $16		; byte ; bit 0 = poisoned; bit 1 = paralyzed; bit 2 = dead; bit 3 = asleep; bit 4 = tech sealed; bit 5 = asleep; bit 6 = dead (for androids)
 strength = $18		; byte
 strength_mod = $19	; byte
 strength_battle = $1A	; byte
@@ -66,7 +66,7 @@ StatusDead = 2
 StatusAsleep = 3
 StatusTechSealed = 4
 StatusAsleep2 = 5
-StatusAndroidDead = 6	; only Wren and Demi use this; this bit governs their reviving after battle
+StatusAndroidDead = 6
 
 ; Status masks
 StatusPoisoned_Mask =  1<<StatusPoisoned	; $01
