@@ -2171,7 +2171,7 @@ Saved_Char_ID_Mem_5 = ramaddr($FFFFED58)
 
 Battle_Priority = ramaddr($FFFFEE45)	; 0 = normal; 1 = surprise attack; $FF = ambush
 
-Ability_Effect_Type = ramaddr($FFFFEE4A)	; word ;
+Ability_Effect_Type = ramaddr($FFFFEE4A)	; word ; 0 = physical attack; 1 = enemy skill; 2 = technique; 3 = skill; 4 = item
 
 Close_Range_Wpn_Sound = ramaddr($FFFFEE61)
 
