@@ -1953,6 +1953,10 @@ Battle_Command_Data = ramaddr($FFFF410A)		; 4 bytes per character; values are as
 												;    byte 1 = Index of command; 1 = attack; 2 = technique; 3 = skill; 4 = item; 5 = defense
 												;    byte 2 = when command is technique, skill or item, this is the ID of the respective command
 												;    bytes 3-4 = target index
+												
+Character_Command_Data = ramaddr($FFFF410A)
+Enemy_Command_Data = ramaddr($FFFF411E)
+												
 Battle_Tech_List = ramaddr($FFFF412E)
 Current_Turn_Number = ramaddr($FFFF4140)
 Battle_Skill_List = ramaddr($FFFF4142)
