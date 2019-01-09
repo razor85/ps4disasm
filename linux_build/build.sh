@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 version="0.0.5b"
 
@@ -6,6 +6,8 @@ this="${0##*/}"
 
 usage="USAGE: ${this} <assembly file> <output> [output] [... [outputN]]
        ${this} --help"
+
+fixheader="`dirname $0`/fixheader.py"
 
 help="$this for disassembled SEGA Mega Drive / Genesis Phantasy Star games.
 Version ${version}
@@ -17,6 +19,7 @@ Major dependencies are
     - gawk 4.1.1 or newer for inline patching
     - gcc only for compiling the p2bin
     - BSDiff, Xdelta, bdiff for support of patch file creation
+    - If you want to use built-in fixheader, you need Python 3.
 
 Note that this script may reside anywhere in the filesystem.
 Also running this script outside of the directory where the assembly is allowed.
