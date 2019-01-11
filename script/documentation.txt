@@ -62,9 +62,9 @@
 ;    in the output string. Not sure that works in AS but I read
 ;    that syntax in asm68k.
 ;
-; 3. Make sure you have koscmp somewhere on your PATH. You can get
-;    it compiled from source here: https://github.com/flamewing/mdcomp
-;    I'll probably make a Windows executable available at one point.
+; 3. There's a koscmp executable in the 'compressors' folder; if you
+;    decide to move it, make sure you update its path referenced in
+;    the 'compress_script.py' file.
 ;
 ; 4. Run the compress_script.py script using Python 3.6+. Again I
 ;    may supply a Windows executable using pyInstaller at one point.

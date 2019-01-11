@@ -249,7 +249,7 @@ for fname in remainder:
 	if idx != 0:
 		print("backing up", bindest, "to", bindest2)
 		bindest.rename(bindest2)
-	subprocess.run(['koscmp', str(dest.resolve(strict=True)), str(bindest.resolve())])
+	subprocess.run(['../compressors/koscmp', str(dest.resolve(strict=True)), str(bindest.resolve())])
 	# pad to 16 bytes
 	with open(bindest, "r+b") as f:
 		f.seek(0, io.SEEK_END)
