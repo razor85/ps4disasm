@@ -38,18 +38,6 @@ __main:
 	move.l	#PixelFontSizeT, d1  ; Move number of characters (font size in tiles) to d1
 	jsr		LoadFont            ; Jump to subroutine
 
-; wait for joystick start button
-	; wait for VBlankStart
--
-	move.w	vdp_control, d0
-	andi.w	#$0008, d0
-	bne		-
-
-	; wait for VBlankEnd
--	move.w	vdp_control, d0
-	andi.w	#$0008, d0
-	beq		-
-
 	; wait until the d0 register is uncleared
 	; this should be done in the debugger
 	clr.b	d0
