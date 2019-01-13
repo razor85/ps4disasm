@@ -6,12 +6,20 @@ import pathlib
 import subprocess
 import io
 
+# change this if the start address is changed in ps4constants.asm
+Dialogue_Trees_ADDRESS = 0xFF3000
+MAX_TEXT_ADDRESS = 0xFF4ECF
+MAX_TEXT_SIZE = MAX_TEXT_ADDRESS - Dialogue_Trees_ADDRESS
+
+# alternatively, if you're not 100% sure, max length in US script is 7220 bytes
+#MAX_TEXT_SIZE = 7220
+
 
 CHARSET_RANGE = re.compile(r"^\s+charset\s+'(.)'\s*,\s*'(.)'\s*,\s*((\$[A-Fa-f0-9][A-Fa-f0-9])|(\d+))\s*(;.*)?$")
 CHARSET_SINGLE = re.compile(r"^\s+charset\s+'(.)'\s*,\s*((\$[A-Fa-f0-9][A-Fa-f0-9])|(\d+))\s*(;.*)?$")
 CHARSET_SINGLE_NUM = re.compile(r"^\s+charset\s+(\$[A-Fa-f0-9][A-Fa-f0-9])\s*,\s*((\$[A-Za-z0-9][A-Za-z0-9])|(\d+))\s*(;.*)?$")
 
-IF_DIRECTIVE = re.compile(r"^\s+if\s+([A-Za-z0-9_]+)\s+=\s+([0-9]+)\s*$")
+IF_DIRECTIVE = re.compile(r"^\s+if\s+([A-Za-z0-9_]+)\s*=\s*([0-9]+)\s*$")
 ELSE_DIRECTIVE = re.compile(r"^\s+else\s*$")
 ENDIF_DIRECTIVE = re.compile(r"^\s+endif\s*$")
 DC_DIRECTIVE = re.compile(r"^\s+dc\.b\s+(.*)$")
@@ -24,9 +32,15 @@ symbols = [a for a in sys.argv[1:] if '=' in a]
 symbols = {arg: val for arg, val in map(lambda s: s.split('='), symbols)}
 remainder = set([a for a in sys.argv[1:] if '=' not in a])
 debug = False
+no_compress = False
 if '--debug' in remainder:
 	debug = True
 	remainder.remove('--debug')
+	
+if "--no-compress" in remainder:
+	no_compress = True
+	remainder.remove("--no-compress")
+	
 remainder = [pathlib.Path(f) for f in remainder]
 
 print("Processing using symbols:", symbols)
@@ -73,7 +87,7 @@ def normal(line, linenum, out):
 	m = IF_DIRECTIVE.match(line)
 	if m:
 		var, val = m.group(1), m.group(2)
-		if val == symbols.get(val, None):
+		if val == symbols.get(var, None):
 			return look_for_else
 		else:
 			return look_for_else_skip
@@ -235,24 +249,30 @@ for fname in remainder:
 		if out.tell() % 2 != 0:
 			out.write(bytes([0]))
 		print("done processing", fname, "to", dest)
+		if out.tell() > MAX_TEXT_SIZE:
+			print("WARNING! script file ", fname, "is too large (", out.tell(), " bytes)", file=sys.stderr, sep='')
+			print("You may need to relocate the decompression buffer.", file=sys.stderr, sep='')
+			print("Press enter to continue.", file=sys.stderr, sep='')
+			input()
 	if debug:
 		dump(dest)
 		if dest2.exists():
 			dump(dest2)
 	# compress
-	bindest = fname.with_suffix('.bin')
-	bindest2 = bindest
-	idx = 0
-	while bindest2.exists():
-		bindest2 = bindest2.with_suffix('.bin.{}'.format(idx))
-		idx += 1
-	if idx != 0:
-		print("backing up", bindest, "to", bindest2)
-		bindest.rename(bindest2)
-	subprocess.run(['../compressors/koscmp', str(dest.resolve(strict=True)), str(bindest.resolve())])
-	# pad to 16 bytes
-	with open(bindest, "r+b") as f:
-		f.seek(0, io.SEEK_END)
-		sz = f.tell()
-		if sz % 16 != 0:
-			f.write(bytes(sz%16))
+	if not(no_compress):
+		bindest = fname.with_suffix('.bin')
+		bindest2 = bindest
+		idx = 0
+		while bindest2.exists():
+			bindest2 = bindest.with_suffix('.bin.{}'.format(idx))
+			idx += 1
+		if idx != 0:
+			print("backing up", bindest, "to", bindest2)
+			bindest.rename(bindest2)
+		subprocess.run(['../compressors/koscmp', str(dest.resolve(strict=True)), str(bindest.resolve())])
+		# pad to 16 bytes
+		with open(bindest, "r+b") as f:
+			f.seek(0, io.SEEK_END)
+			sz = f.tell()
+			if sz % 16 != 0:
+				f.write(bytes(16 - sz%16))

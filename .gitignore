@@ -8,3 +8,4 @@ ps4built.prev.bin
 # Linux builder creates this
 p2bin
 
+script/*.bin.*
