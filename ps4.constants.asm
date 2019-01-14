@@ -1895,6 +1895,30 @@ Command_Skill = 3
 Command_Item  = 4
 Command_Defense  = 5
 
+
+WindowSize_CombatTransient = $12	; width of "Cannot flee!"/"Surprise Attack!" window
+Title_ScrollDelay = $2C				; number of lines to show for scrolling title text
+Hunter_guild_cursor_x = $108		; X position of red cursor (pixels) for Hunter's guild window
+
+; ---------------------------------------------------------------------------
+; Credits
+; ---------------------------------------------------------------------------
+; delays are in frames, there are $20 frames per credits page. However, stage
+; 1 and 2 page must come in pair, so if you want to increase those, increase
+; them by multiples of $40.
+;
+; Stage 1 is from start of credits until Motavia shows up (last big planet)
+; Stage 2 is from start of Motavia showing up to start of title font only
+; pages (starts with "Thank you for playing")
+; Stage 3 is from start of title font only pages to fade to white before
+; showing the "Fin" screen with Alis & Myau's statue in Termi
+; You usually only want to mess with the stage 1 delay, mainly because Motavia
+; will stick there for too long if you increase stage 2, and stage 3 has a more
+; hardcoded command sequence.
+CreditsStage1_ScrollDelay = $380 
+CreditsStage2_ScrollDelay = CreditsStage1_ScrollDelay + $80
+CreditsStage3_ScrollDelay = CreditsStage2_ScrollDelay + $80
+
 ; ---------------------------------------------------------------------------
 ; Address Constants
 ; ---------------------------------------------------------------------------
@@ -1943,8 +1967,14 @@ ramaddr function x,-(-x)&$FFFFFFFF
 RAM_Start = ramaddr($FFFF0000)
 
 Battle_Palette_Objects = ramaddr($FFFF2A90)
-
 Dialogue_Trees = ramaddr($FFFF3000)
+
+; If your dialogue is too large, you can gain around 1000 bytes by
+; commenting the two lines above and uncommenting the two below.
+; Note that this is still untested.
+;Battle_Palette_Objects = ramaddr($FFFF2000)
+;Dialogue_Trees = ramaddr($FFFF2A90)
+
 
 Battle_Routine = ramaddr($FFFF4100)
 Battle_Total_Comd_Input = ramaddr($FFFF4106)	; number is incremented each time a command for a character has been selected
@@ -2172,6 +2202,11 @@ Saved_Char_ID_Mem_2 = ramaddr($FFFFED55)
 Saved_Char_ID_Mem_3 = ramaddr($FFFFED56)
 Saved_Char_ID_Mem_4 = ramaddr($FFFFED57)
 Saved_Char_ID_Mem_5 = ramaddr($FFFFED58)
+
+TextCounter = ramaddr($FFFFED90)		; Used to count scrolling intro text or ending credits frame count
+FadeControl = ramaddr($FFFFED95)		; Used to count palette fade in/out frames
+CredText_A = ramaddr($FFFFED96)			; Additional flags for palette fade in/out
+CredText_B = ramaddr($FFFFED98)			; additional flags for palette fade in/out
 
 Battle_Priority = ramaddr($FFFFEE45)	; 0 = normal; 1 = surprise attack; $FF = ambush
 
