@@ -28,9 +28,7 @@ class IgnoreDcProcessor:
 		return line
 
 	def process(self, m, linenum):
-		global debug
-		if debug:
-			print(m)
+		pass
 
 DC_W_DIRECTIVE = re.compile(r"^\s+dc\.w\s+((\$[A-Fa-f0-9]{4})|(\d+))\s*(;.*)?$")
 class DcWProcessor(IgnoreDcProcessor):
@@ -236,9 +234,9 @@ class Processor:
 		if m:
 			var, val = m.group(1), m.group(2)
 			if val == self.symbols.get(var, None):
-				return look_for_else
+				return self.look_for_else
 			else:
-				return look_for_else_skip
+				return self.look_for_else_skip
 		self.process_non_controlflow(line)
 		return self.normal
 		
@@ -272,7 +270,7 @@ class Processor:
 		if m:
 			return self.normal
 		self.process_non_controlflow(line)
-		return look_for_endif
+		return self.look_for_endif
 			
 	def process_non_controlflow(self, line):
 		m = ASSIGN_DIRECTIVE.match(line)
