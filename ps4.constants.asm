@@ -1969,11 +1969,11 @@ RAM_Start = ramaddr($FFFF0000)
 Battle_Palette_Objects = ramaddr($FFFF2A90)
 Dialogue_Trees = ramaddr($FFFF3000)
 
-; If your dialogue is too large, you can gain around 1000 bytes by
+; If your dialogue is too large, you can gain $1000 bytes by
 ; commenting the two lines above and uncommenting the two below.
-; Note that this is still untested.
-;Battle_Palette_Objects = ramaddr($FFFF2000)
-;Dialogue_Trees = ramaddr($FFFF2A90)
+; This is not fully tested yet but appears to work.
+;Dialogue_Trees = ramaddr($FFFF2000)
+;Battle_Palette_Objects = ramaddr($FFFF2A90)
 
 
 Battle_Routine = ramaddr($FFFF4100)
