@@ -118,3 +118,4 @@ _clr	macro
 _tst	macro
 		insn1op tst.ATTRIBUTE, ALLARGS
 	endm
+

@@ -2203,6 +2203,9 @@ Saved_Char_ID_Mem_3 = ramaddr($FFFFED56)
 Saved_Char_ID_Mem_4 = ramaddr($FFFFED57)
 Saved_Char_ID_Mem_5 = ramaddr($FFFFED58)
 
+; this is only used if uncompressed_dialogs is true
+Current_Dialogue_Tree = ramaddr($FFFFED60)
+
 TextCounter = ramaddr($FFFFED90)		; Used to count scrolling intro text or ending credits frame count
 FadeControl = ramaddr($FFFFED95)		; Used to count palette fade in/out frames
 CredText_A = ramaddr($FFFFED96)			; Additional flags for palette fade in/out
