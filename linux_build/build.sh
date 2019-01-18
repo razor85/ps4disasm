@@ -8,6 +8,7 @@ usage="USAGE: ${this} <assembly file> <output> [output] [... [outputN]]
        ${this} --help"
 
 fixheader="`dirname $0`/fixheader.py"
+ips="`dirname $0`/lipx.py"
 
 help="$this for disassembled SEGA Mega Drive / Genesis Phantasy Star games.
 Version ${version}
@@ -132,8 +133,10 @@ create_bdelta() {
 
 # IPS is a common format too. romhacking.net users might want to use this.
 create_ips() {
-    warn "ips patches not implemented yet."
-    errexit "If you know a ips patch creation cli utility for Linux, please post an issue at:\nhttps://github.com/Zuccace/mdps-asm-builder/issues"
+    check_dep "${ips}" die && "$ips" -c "$1" "$2" || warn "ips failed."
+    mv "$2.ips" "$3"
+#    warn "ips patches not implemented yet."
+#    errexit "If you know a ips patch creation cli utility for Linux, please post an issue at:\nhttps://github.com/Zuccace/mdps-asm-builder/issues"
 }
 
 ### Go trough CLI switches.

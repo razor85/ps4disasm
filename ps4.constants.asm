@@ -1969,11 +1969,11 @@ RAM_Start = ramaddr($FFFF0000)
 Battle_Palette_Objects = ramaddr($FFFF2A90)
 Dialogue_Trees = ramaddr($FFFF3000)
 
-; If your dialogue is too large, you can gain around 1000 bytes by
+; If your dialogue is too large, you can gain $1000 bytes by
 ; commenting the two lines above and uncommenting the two below.
-; Note that this is still untested.
-;Battle_Palette_Objects = ramaddr($FFFF2000)
-;Dialogue_Trees = ramaddr($FFFF2A90)
+; This is not fully tested yet but appears to work.
+;Dialogue_Trees = ramaddr($FFFF2000)
+;Battle_Palette_Objects = ramaddr($FFFF2A90)
 
 
 Battle_Routine = ramaddr($FFFF4100)
@@ -2185,7 +2185,11 @@ Saved_Sound_Index = ramaddr($FFFFECEC)
 Battle_Type = ramaddr($FFFFECEE)	; 0 = Profound Darkness battle; 1 = event (or boss) battle; 2 = random battle
 Mota_Battle_BG_Index = ramaddr($FFFFECEF)	; Motavia (outside) has different backgrounds depending on the tile you're standing on
 
-Saved_Dialogue_Addr = ramaddr($FFFFECF0)	; word
+	if dialogue_uncompressed = 1
+Saved_Dialogue_Addr = ramaddr($FFFFED64)	; dword if dlg uncompressed since we must point at correct ROM address AND there's more than 64 kb of dialogue... Note that this is used by a macro so this is mostly for documenting
+	else
+Saved_Dialogue_Addr = ramaddr($FFFFECF0)	; word if dlg compresssed, since it's in RAM it just gets sign-extended
+	endif
 Map_Dialogue_Trees_Addr = ramaddr($FFFFECF8)
 
 Event_Battle_Index = ramaddr($FFFFECFC)
@@ -2202,6 +2206,9 @@ Saved_Char_ID_Mem_2 = ramaddr($FFFFED55)
 Saved_Char_ID_Mem_3 = ramaddr($FFFFED56)
 Saved_Char_ID_Mem_4 = ramaddr($FFFFED57)
 Saved_Char_ID_Mem_5 = ramaddr($FFFFED58)
+
+; this is only used if uncompressed_dialogs is true
+Current_Dialogue_Tree = ramaddr($FFFFED60)
 
 TextCounter = ramaddr($FFFFED90)		; Used to count scrolling intro text or ending credits frame count
 FadeControl = ramaddr($FFFFED95)		; Used to count palette fade in/out frames
