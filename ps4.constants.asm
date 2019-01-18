@@ -2185,7 +2185,11 @@ Saved_Sound_Index = ramaddr($FFFFECEC)
 Battle_Type = ramaddr($FFFFECEE)	; 0 = Profound Darkness battle; 1 = event (or boss) battle; 2 = random battle
 Mota_Battle_BG_Index = ramaddr($FFFFECEF)	; Motavia (outside) has different backgrounds depending on the tile you're standing on
 
-Saved_Dialogue_Addr = ramaddr($FFFFECF0)	; word
+	if dialogue_uncompressed = 1
+Saved_Dialogue_Addr = ramaddr($FFFFED64)	; dword if dlg uncompressed since we must point at correct ROM address AND there's more than 64 kb of dialogue... Note that this is used by a macro so this is mostly for documenting
+	else
+Saved_Dialogue_Addr = ramaddr($FFFFECF0)	; word if dlg compresssed, since it's in RAM it just gets sign-extended
+	endif
 Map_Dialogue_Trees_Addr = ramaddr($FFFFECF8)
 
 Event_Battle_Index = ramaddr($FFFFECFC)
