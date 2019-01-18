@@ -119,3 +119,28 @@ _tst	macro
 		insn1op tst.ATTRIBUTE, ALLARGS
 	endm
 
+; when managing dialogues compressed vs uncompressed,
+; we must modify some code to store the saved dialogue
+; in a different location because it needs to be a
+; 24-bit value, since in ROM the dialogue size is > 64KB
+; (and also it'S not in RAM so we can't just sign-extend)
+pushdlg		macro
+	if dialogue_uncompressed = 1
+		move.l  a0, (Saved_Dialogue_Addr).w
+	else
+		move.w	a0, (Saved_Dialogue_Addr).w
+	endif
+	endm
+
+popdlg		macro
+	if dialogue_uncompressed = 1
+		move.l  (Saved_Dialogue_Addr).w, d0
+	else
+		moveq	#-1, d0
+		move.w	(Saved_Dialogue_Addr).w, d0
+	endif
+	movea.l d0, a0
+	endm
+
+
+
