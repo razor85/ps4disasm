@@ -56,6 +56,7 @@ skills = $62
 curr_skill_uses = $6A
 max_skill_uses = $6B
 gain_exp_flag = $7A		; byte ; flag which is set if a character participates and wins a battle at least once. After that characters start gaining experience even if they are not in the party
+physical_prop_save = $7B	; in case we use the physical_prop bugfix, we need to save the prop here so defend doesn't override the armor setting
 ; ---------------------------------------------------------------------------
 
 ; ---------------------------------------------------------------------------
