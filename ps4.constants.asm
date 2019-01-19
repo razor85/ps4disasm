@@ -2044,6 +2044,9 @@ Chunk_Table = ramaddr($FFFF6000)	; 32x32 definitions; 32 bytes (16 words) per de
 Text_Buffer = ramaddr($FFFF7000)
 Plane_A_Buffer = ramaddr($FFFF8000)
 Plane_B_Buffer = ramaddr($FFFF9000)
+Plane_A_Buffer_DMA = $7FFFC000		; when we refer to plane buffers through DMA, value has to be divided by 2
+Plane_B_Buffer_DMA = $7FFFC800		; if you change location of those plane buffers make sure you change the
+					; _DMA values as well
 Map_Layout_FG = ramaddr($FFFFA000)
 Map_Layout_BG = ramaddr($FFFFB000)
 
