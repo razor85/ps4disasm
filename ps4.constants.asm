@@ -2119,7 +2119,12 @@ Map_Start_Char_Align = ramaddr($FFFFEC46)	; alignment of the characters relative
 											; $10 = Characters on the right of lead character
 Map_Start_X_Pos = ramaddr($FFFFEC48)
 Map_Start_Y_Pos = ramaddr($FFFFEC4A)
-
+Map_Row_Size_FG = ramaddr($FFFFEC64)
+Map_Column_Size_FG = ramaddr($FFFFEC65)
+Map_Row_Size_BG = ramaddr($FFFFEC66)
+Map_Column_Size_BG = ramaddr($FFFFEC67)
+Saved_Map_Row_Size = ramaddr($FFFFEC70)
+Saved_Map_Column_Size = ramaddr($FFFFEC72)
 Map_Data_Manager_Addr = ramaddr($FFFFEC74)
 
 Vehicle_Boarding_Flags = ramaddr($FFFFEC7F)	; determines if you can board a vehicle on the tile you're standing on
