@@ -2130,6 +2130,10 @@ Map_Row_Size_FG = ramaddr($FFFFEC64)
 Map_Column_Size_FG = ramaddr($FFFFEC65)
 Map_Row_Size_BG = ramaddr($FFFFEC66)
 Map_Column_Size_BG = ramaddr($FFFFEC67)
+Map_X_Refresh_Flags_FG = ramaddr($FFFFEC68)	; bitfield	; determines when to refresh tiles or map layout when moving; bit 0 = if set, refresh every 32 pixels; bit 1 = if set, refresh every 256 pixels
+Map_Y_Refresh_Flags_FG = ramaddr($FFFFEC69)	; bitfield	; determines when to refresh tiles or map layout when moving; bit 0 = if set, refresh every 32 pixels; bit 1 = if set, refresh every 256 pixels
+Map_X_Refresh_Flags_BG = ramaddr($FFFFEC6A)	; bitfield	; determines when to refresh tiles or map layout when moving; bit 0 = if set, refresh every 32 pixels; bit 1 = if set, refresh every 256 pixels
+Map_Y_Refresh_Flags_BG = ramaddr($FFFFEC6B)	; bitfield	; determines when to refresh tiles or map layout when moving; bit 0 = if set, refresh every 32 pixels; bit 1 = if set, refresh every 256 pixels
 Saved_Chunk_Number = ramaddr($FFFFEC6C)
 Saved_Chunk_Column = ramaddr($FFFFEC6E)
 Saved_Map_Row_Size = ramaddr($FFFFEC70)
