@@ -32,6 +32,7 @@ dfs_pow = $28			; word
 dfs_pow_battle = $2A	; word
 magic_dfs = $2C			; word
 magic_dfs_battle = $2E	; word
+element_props = $30
 physical_prop = $30		; word
 energy_prop = $32		; word
 fire_prop = $34			; word
