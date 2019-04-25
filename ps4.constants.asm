@@ -2170,6 +2170,8 @@ Tile_Collision_Top_Left_2 = ramaddr($FFFFEC8C)
 Tile_Collision_Up_2 = ramaddr($FFFFEC8D)
 Tile_Collision_Top_Right_2 = ramaddr($FFFFEC8E)
 
+Map_General_Var = ramaddr($FFFFEC8F)
+
 Window_Index = ramaddr($FFFFEC90)
 Saved_Window_Index = ramaddr($FFFFEC92)
 Win_Group_Start_Addr = ramaddr($FFFFEC94)
