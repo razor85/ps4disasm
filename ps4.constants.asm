@@ -2219,6 +2219,8 @@ Map_Dialogue_Trees_Addr = ramaddr($FFFFECF8)
 
 Event_Battle_Index = ramaddr($FFFFECFC)
 
+Render_Sprites_In_Cutscenes = ramaddr($FFFFECFD)	; byte ; 0 = render sprites in cutscenes; 1 = don't render sprites in cutscenes
+
 Panel_Index = ramaddr($FFFFED00)
 Panel_Num = ramaddr($FFFFED02)
 Panel_Data = ramaddr($FFFFED10)
