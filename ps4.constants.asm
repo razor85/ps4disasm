@@ -2121,6 +2121,9 @@ Map_Start_Char_Align = ramaddr($FFFFEC46)	; alignment of the characters relative
 Map_Start_X_Pos = ramaddr($FFFFEC48)
 Map_Start_Y_Pos = ramaddr($FFFFEC4A)
 Field_Input_Buffer = ramaddr($FFFFEC4C)			; byte
+Map_Load_Flags = ramaddr($FFFFEC4E)	; bitfield ; bit 0 = object reload (generally between battles); bit 1 = render characters at saved coordinates upon loading the game;
+											   ; bit 2 = object reload (used during cutscenes); bit 3 = keep objects (used for map refresh during events)
+											   ; bit 7 = skip palette fade in
 BG_Alternate_Color_Flag = ramaddr($FFFFEC4F)	; byte; if set, for Plane B use the first palette line; also render tiles at lower priority
 												; when loading the Chunk table, all patterns are set to use the second palette line by default for Plane A
 Camera_X_Step_Counter_FG = ramaddr($FFFFEC50)
@@ -2209,6 +2212,8 @@ Saved_Sound_Index = ramaddr($FFFFECEC)
 
 Battle_Type = ramaddr($FFFFECEE)	; 0 = Profound Darkness battle; 1 = event (or boss) battle; 2 = random battle
 Mota_Battle_BG_Index = ramaddr($FFFFECEF)	; Motavia (outside) has different backgrounds depending on the tile you're standing on
+Char_Move_Flags = ramaddr($FFFFECFE)	; bitfield ; bit 0 = follow lead character; bit 1 = update movement order (X first, Y second or viceversa)
+												   ; bit 2 = lock camera
 
 	if dialogue_uncompressed = 1
 Saved_Dialogue_Addr = ramaddr($FFFFED64)	; dword if dlg uncompressed since we must point at correct ROM address AND there's more than 64 kb of dialogue... Note that this is used by a macro so this is mostly for documenting
