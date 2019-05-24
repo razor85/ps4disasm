@@ -2228,7 +2228,21 @@ Render_Sprites_In_Cutscenes = ramaddr($FFFFECFD)	; byte ; 0 = render sprites in 
 
 Panel_Index = ramaddr($FFFFED00)
 Panel_Num = ramaddr($FFFFED02)
+Panel_Tile_Backup_Curr = ramaddr($FFFFED04)
 Panel_Data = ramaddr($FFFFED10)
+Panel_VRAM_Destination = ramaddr($FFFFED10)
+Panel_Art_Addr = ramaddr($FFFFED12)
+Panel_Row_Size = ramaddr($FFFFED16)
+Panel_Col_Size = ramaddr($FFFFED17)
+Panel_X_Pos = ramaddr($FFFFED18)
+Panel_Y_Pos = ramaddr($FFFFED19)
+Panel_Art_Tile_1 = ramaddr($FFFFED1A)
+Panel_Palette_Addr_1 = ramaddr($FFFFED1C)
+Panel_Pattern_Addr_1 = ramaddr($FFFFED20)
+Panel_Art_Tile_2 = ramaddr($FFFFED24)
+Panel_Palette_Addr_2 = ramaddr($FFFFED26)
+Panel_Pattern_Addr_2 = ramaddr($FFFFED2A)
+Panel_Tile_Backup_List = ramaddr($FFFFED30)
 
 Town_Teleport_Flag = ramaddr($FFFFED50)	; if 0, you can use Ryuka and Telepipe
 Dungeon_Teleport_Index = ramaddr($FFFFED51)	; index which determines the coordinates you get teleported at (through Escapipe or Hinas) for every dungeon; if 0, teleport doesn't work
