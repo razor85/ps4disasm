@@ -1997,6 +1997,7 @@ Current_Target_Index = ramaddr($FFFF4144)	; word
 Current_Command = ramaddr($FFFF4146)
 Fighters_Hit_Flags = ramaddr($FFFF4150)	; $00 = normal attack; $01 = critical hit; $FF = not being targeted or miss
 Battle_Item_List = ramaddr($FFFF4152)
+Battle_Damage_List = ramaddr($FFFF415A)	; Damage for each fighter according to their ID
 Battle_Ability_Effects = ramaddr($FFFF4170) ; if 0 the effect for a skill, technique, etc doesn't work; other numbers are the effects
 Battle_Ability_Range = ramaddr($FFFF4182)	; range (e.g. single target) of techniques and skills
 Battle_Skill_Done_Flag = ramaddr($FFFF4188)	; byte ; set to true when battle objects for skills have finished processing
@@ -2226,6 +2227,7 @@ Event_Battle_Index = ramaddr($FFFFECFC)
 
 Render_Sprites_In_Cutscenes = ramaddr($FFFFECFD)	; byte ; 0 = render sprites in cutscenes; 1 = don't render sprites in cutscenes
 
+; Manga panel illustrations
 Panel_Index = ramaddr($FFFFED00)
 Panel_Num = ramaddr($FFFFED02)
 Panel_Tile_Backup_Curr = ramaddr($FFFFED04)
