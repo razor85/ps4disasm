@@ -2258,6 +2258,12 @@ Saved_Char_ID_Mem_5 = ramaddr($FFFFED58)
 ; this is only used if uncompressed_dialogs is true
 Current_Dialogue_Tree = ramaddr($FFFFED60)
 
+VWF_Mem_Block = ramaddr($FFFFED70)
+VWF_Char_Width =  ramaddr($FFFFED70)	; Character width being processed
+VWF_Pixel_Count =  ramaddr($FFFFED71)		; Amount of pixels used in the current tile
+VWF_Leave_Out_Pixels =  ramaddr($FFFFED72)		; Amount of pixels to leave out when using a second tile
+VWF_Render_Flags =  ramaddr($FFFFED73)		; bitfield; 0 = next tile flag; 1 = double tile update
+
 TextCounter = ramaddr($FFFFED90)		; Used to count scrolling intro text or ending credits frame count
 FadeControl = ramaddr($FFFFED95)		; Used to count palette fade in/out frames
 CredText_A = ramaddr($FFFFED96)			; Additional flags for palette fade in/out
