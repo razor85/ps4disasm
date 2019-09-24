@@ -197,11 +197,11 @@
 	dc.b	$FC
 	dc.b	"village northeast of here."
 	dc.b	$FD
-	dc.b	"Recently, I haven't been getting"
+	dc.b	"Recently,"
 	dc.b	$FC
-	dc.b	"my allowance. I wonder if"
+	dc.b	"I haven't been getting my allowance."
 	dc.b	$FD
-	dc.b	"they've forgotten me?"
+	dc.b	"I wonder if they've forgotten me?"
 	dc.b	$FD
 	dc.b	"Oh well, I better find a job."
 	dc.b	$FD
@@ -227,15 +227,15 @@
 	dc.b	$0C, $01
 	dc.b	"Just when it seemed that the"
 	dc.b	$FC
-	dc.b	"number of monsters was"
+	dc.b	"number of monsters was decreasing,"
 	dc.b	$FD
-	dc.b	"decreasing, they're now roaming"
+	dc.b	"they're now roaming"
 	dc.b	$FC
 	dc.b	"in the town!"
 	dc.b	$FD
-	dc.b	"Do you think this is some"
+	dc.b	"Do you think this is"
 	dc.b	$FC
-	dc.b	"kind of omen?"
+	dc.b	"some kind of omen?"
 	dc.b	$FF
 
 ; $43
@@ -257,16 +257,16 @@
 	dc.b	$DA, $02
 	dc.b	$FA
 	dc.b	$0C, $01
-	dc.b	"No monster can get into this"
+	dc.b	"No monster can get into this town. The"
 	dc.b	$FC
-	dc.b	"town. The wall surrounding the"
+	dc.b	"wall surrounding the town will protect us."
 	dc.b	$FD
-	dc.b	"town will protect us."
-	dc.b	$FD
-	dc.b	"That's why I think those strange"
+	dc.b	"That's why I think"
 	dc.b	$FC
-	dc.b	"monsters must be appearing from"
+	dc.b	"those strange monsters"
 	dc.b	$FD
+	dc.b	"must be appearing from"
+	dc.b	$FC
 	dc.b	"within the town."
 	dc.b	$FD
 	dc.b	"I think there's something mighty"
@@ -301,15 +301,13 @@
 	dc.b	$FC
 	dc.b	"night, some suspicious-looking"
 	dc.b	$FD
-	dc.b	"men carried a big parcel into "
+	dc.b	"men carried a big parcel"
 	dc.b	$FC
-	dc.b	"the academy!"
+	dc.b	"into the academy!"
 	dc.b	$FD
 	dc.b	"This happened some time ago,"
 	dc.b	$FC
-	dc.b	"but I wonder what it could've"
-	dc.b	$FD
-	dc.b	"been!"
+	dc.b	"but I wonder what it could've been!"
 	dc.b	$FF
 
 ; $49
@@ -335,9 +333,7 @@
 	dc.b	$DA, $01
 	dc.b	"What's with you guys?"
 	dc.b	$FD
-	dc.b	"You're being way too"
-	dc.b	$FC
-	dc.b	"friendly!"
+	dc.b	"You're being way too friendly!"
 	dc.b	$FF
 
 ; $4C
@@ -355,7 +351,7 @@
 	dc.b	$FD
 	dc.b	"Crops barely grow on this farm."
 	dc.b	$FD
-	dc.b	"My boyfriend,in the agricultural"
+	dc.b	"My boyfriend, in the agricultural"
 	dc.b	$FC
 	dc.b	"department, is rather upset."
 	dc.b	$FF
@@ -391,17 +387,15 @@
 	dc.b	$DA, $01
 	dc.b	"I heard some students jumped"
 	dc.b	$FC
-	dc.b	"into this fountain the other"
+	dc.b	"into this fountain the other day."
 	dc.b	$FD
-	dc.b	"day."
-	dc.b	$FD
-	dc.b	"I can't believe I missed all"
+	dc.b	"I can't believe"
 	dc.b	$FC
-	dc.b	"the fun."
+	dc.b	"I missed all the fun."
 	dc.b	$FD
-	dc.b	"You should take a dip, it'll"
+	dc.b	"You should take a dip,"
 	dc.b	$FC
-	dc.b	"do you good."
+	dc.b	"it'll do you good."
 	dc.b	$FF
 
 ; $52
@@ -414,10 +408,10 @@
 	dc.b	$FA
 	dc.b	$0C, $01
 	dc.b	"Orders from the principal."
-	dc.b	$FC
-	dc.b	"I can't allow anyone to pass"
 	dc.b	$FD
-	dc.b	"beyond this point!"
+	dc.b	"I can't allow anyone"
+	dc.b	$FC
+	dc.b	"to pass beyond this point!"
 	dc.b	$FF
 
 ; $54
@@ -509,9 +503,7 @@
 	dc.b	$65, $01
 	dc.b	"I've got a report due tomorrow,"
 	dc.b	$FC
-	dc.b	"but I haven't written a word"
-	dc.b	$FD
-	dc.b	"of it!"
+	dc.b	"but I haven't written a word of it!"
 	dc.b	$FF
 
 ; $5E
@@ -571,9 +563,7 @@
 	dc.b	$26, $01
 	dc.b	"The girl next door has been"
 	dc.b	$FC
-	dc.b	"influenced by some strange"
-	dc.b	$FD
-	dc.b	"religion."
+	dc.b	"influenced by some strange religion."
 	dc.b	$FD
 	dc.b	"She's been missing for a while."
 	dc.b	$FC

@@ -13,9 +13,9 @@
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$01, $01
-	dc.b	"So he's the one who requested"
+	dc.b	"So he's the one who"
 	dc.b	$FC
-	dc.b	"the commission."
+	dc.b	"requested the commission."
 	dc.b	$FD
 	dc.b	"I wonder where he is?"
 	dc.b	$FF
@@ -23,29 +23,25 @@
 ; $2
 	dc.b	$F4
 	dc.b	$01, $01
-	dc.b	"Are you saying that there are"
+	dc.b	"Are you saying that there are monsters"
 	dc.b	$FC
-	dc.b	"monsters in the basement of this"
-	dc.b	$FD
-	dc.b	"academy?"
+	dc.b	"in the basement of this academy?"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02, $00
 	dc.b	"Hmm..."
 	dc.b	$FD
-	dc.b	"Sounds like there's something"
+	dc.b	"Sounds like there's"
 	dc.b	$FC
-	dc.b	"behind all this!"
+	dc.b	"something behind all this!"
 	dc.b	$FF
 
 ; $3
 	dc.b	$F4
 	dc.b	$02, $00
-	dc.b	"Both the principal and Hahn"
+	dc.b	"Both the principal and Hahn have"
 	dc.b	$FC
-	dc.b	"have asked us to inspect"
-	dc.b	$FD
-	dc.b	"the basement."
+	dc.b	"asked us to inspect the basement."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$03, $02

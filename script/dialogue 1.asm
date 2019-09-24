@@ -75,17 +75,17 @@
 	dc.b	$FD
 	dc.b	"A kid like you?!"
 	dc.b	$FD
-	dc.b	"Are you going to be able to"
+	dc.b	"Are you going to be"
 	dc.b	$FC
-	dc.b	"handle it?"
+	dc.b	"able to handle it?"
 	dc.b	$FF
 
 ; $9
 	dc.b	"Wow, hey gorgeous!"
 	dc.b	$FD
-	dc.b	"Why don't you go with me instead"
+	dc.b	"Why don't you go with me"
 	dc.b	$FC
-	dc.b	"of that kid?"
+	dc.b	"instead of that kid?"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
@@ -117,11 +117,9 @@
 	dc.b	$DA, $02
 	dc.b	$FA
 	dc.b	$42, $01
-	dc.b	"Here at Motavia Academy,"
+	dc.b	"Here at Motavia Academy, we search"
 	dc.b	$FC
-	dc.b	"we search for the truth of the"
-	dc.b	$FD
-	dc.b	"universe."
+	dc.b	"for the truth of the universe."
 	dc.b	$FD
 	dc.b	"This is the largest research"
 	dc.b	$FC
@@ -139,17 +137,15 @@
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
-	dc.b	"Really? It doesn't interest me"
+	dc.b	"Really?"
 	dc.b	$FC
-	dc.b	"one bit."
+	dc.b	"It doesn't interest me one bit."
 	dc.b	$FF
 
 ; $E
-	dc.b	"Here at Motavia Academy,"
+	dc.b	"Here at Motavia Academy, we search"
 	dc.b	$FC
-	dc.b	"we search for the truth of the"
-	dc.b	$FD
-	dc.b	"universe."
+	dc.b	"for the truth of the universe."
 	dc.b	$FD
 	dc.b	"This is the largest research"
 	dc.b	$FC
@@ -175,9 +171,9 @@
 	dc.b	$FD
 	dc.b	"Yikes!"
 	dc.b	$FD
-	dc.b	"What are you doing with such"
+	dc.b	"What are you doing with"
 	dc.b	$FC
-	dc.b	"lethal weapons?"
+	dc.b	"such lethal weapons?"
 	dc.b	$FD
 	dc.b	"Get out!"
 	dc.b	$FD
@@ -189,17 +185,15 @@
 ; $11
 	dc.b	"Hahn! What are you doing in the"
 	dc.b	$FC
-	dc.b	"company of those uncivilized"
-	dc.b	$FD
-	dc.b	"animals?"
+	dc.b	"company of those uncivilized animals?"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
 	dc.b	"What a jerk!"
 	dc.b	$FD
-	dc.b	"Maybe I'll have a little fun"
+	dc.b	"Maybe I'll have a"
 	dc.b	$FC
-	dc.b	"with him."
+	dc.b	"little fun with him."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$03
@@ -225,21 +219,17 @@
 	dc.b	$42, $02
 	dc.b	$FA
 	dc.b	$0A, $01
-	dc.b	"I'm studying history."
-	dc.b	$FD
-	dc.b	"This planet has bad problems"
+	dc.b	"I'm studying history. This planet has"
 	dc.b	$FC
-	dc.b	"from the beginning."
+	dc.b	"had problems from the beginning."
 	dc.b	$FD
 	dc.b	"Presently, we have an abnormal"
 	dc.b	$FC
-	dc.b	"climate, soil depletion, and"
+	dc.b	"climate, soil depletion,"
 	dc.b	$FD
-	dc.b	"a decreasing birth rate!"
-	dc.b	$FD
-	dc.b	"It doesn't make for a promising"
+	dc.b	"and a decreasing birth rate! It doesn't"
 	dc.b	$FC
-	dc.b	"future."
+	dc.b	"make for a promising future."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
@@ -249,21 +239,17 @@
 	dc.b	$FF
 
 ; $15
-	dc.b	"I'm studying history."
-	dc.b	$FD
-	dc.b	"This planet has had problems"
+	dc.b	"I'm studying history. This planet has"
 	dc.b	$FC
-	dc.b	"since the beginning."
+	dc.b	"had problems from the beginning."
 	dc.b	$FD
 	dc.b	"Presently, we have an abnormal"
 	dc.b	$FC
-	dc.b	"climate, soil depletion, and"
+	dc.b	"climate, soil depletion,"
 	dc.b	$FD
-	dc.b	"a decreasing birth rate!"
-	dc.b	$FD
-	dc.b	"It makes me pessimistic about"
+	dc.b	"and a decreasing birth rate! It makes"
 	dc.b	$FC
-	dc.b	"the future."
+	dc.b	"me pessimistic about the future."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
@@ -271,11 +257,9 @@
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$03
-	dc.b	"I don't blame him. Recently,"
+	dc.b	"I don't blame him. Recently, the rate of"
 	dc.b	$FC
-	dc.b	"the rate of environmental"
-	dc.b	$FD
-	dc.b	"degradation has increased."
+	dc.b	"environmental degradation has increased."
 	dc.b	$FF
 
 ; $16
@@ -315,9 +299,7 @@
 	dc.b	$FD
 	dc.b	"than to leave town."
 	dc.b	$FC
-	dc.b	"But the principal won't allow"
-	dc.b	$FD
-	dc.b	"it."
+	dc.b	"But the principal won't allow it."
 	dc.b	$FF
 
 ; $19
@@ -355,27 +337,21 @@
 	dc.b	$DA, $02
 	dc.b	$FA
 	dc.b	$0C, $01
-	dc.b	"If you're looking for the"
+	dc.b	"If you're looking for the principal's"
 	dc.b	$FC
-	dc.b	"principal's room, it's way in"
+	dc.b	"room, it's way in the back."
 	dc.b	$FD
-	dc.b	"the back."
-	dc.b	$FD
-	dc.b	"But recently, he's been acting"
+	dc.b	"But recently,"
 	dc.b	$FC
-	dc.b	"strangely."
+	dc.b	"he's been acting strangely."
 	dc.b	$FD
-	dc.b	"I think he's scared of"
-	dc.b	$FC
-	dc.b	"something."
+	dc.b	"I think he's scared of something."
 	dc.b	$FF
 
 ; $1D
-	dc.b	"If you're looking for the"
+	dc.b	"If you're looking for the principal's"
 	dc.b	$FC
-	dc.b	"principal's room, it's way in"
-	dc.b	$FD
-	dc.b	"the back."
+	dc.b	"room, it's way in the back."
 	dc.b	$FF
 
 ; $1E
@@ -430,30 +406,24 @@
 	dc.b	$FA
 	dc.b	$DA, $01
 	dc.b	"A thousand years ago,"
-	dc.b	$FC
-	dc.b	"our society was thrown into"
 	dc.b	$FD
-	dc.b	"confusion by the destruction of"
+	dc.b	"our society was thrown into confusion"
 	dc.b	$FC
-	dc.b	"Mother Brain. After that,"
+	dc.b	"by the destruction of Mother Brain."
 	dc.b	$FD
-	dc.b	"Motavia sustained a direct hit"
+	dc.b	"After that,"
+	dc.b	$FD
+	dc.b	"Motavia sustained a direct hit by a"
 	dc.b	$FC
-	dc.b	"by a fragment of the exploding"
+	dc.b	"fragment of the exploding planet Parma."
 	dc.b	$FD
-	dc.b	"planet Parma."
+	dc.b	"Our civilization was almost destroyed."
 	dc.b	$FD
-	dc.b	"Our civilization was almost"
+	dc.b	"We call this", $3D, "The Great Collapse", $3E, "."
+	dc.b	$FD
+	dc.b	"...Oh."
 	dc.b	$FC
-	dc.b	"destroyed."
-	dc.b	$FD
-	dc.b	"We call this"
-	dc.b	$FC
-	dc.b	"'The Great Collapse.'"
-	dc.b	$FD
-	dc.b	"...Oh. I didn't realize you"
-	dc.b	$FC
-	dc.b	"weren't students."
+	dc.b	"I didn't realize you weren't students."
 	dc.b	$FF
 
 ; $23
@@ -473,9 +443,9 @@
 	dc.b	$FC
 	dc.b	"the planet Parma was lost."
 	dc.b	$FD
-	dc.b	"Now only Dezolis and this"
+	dc.b	"Now only Dezolis and"
 	dc.b	$FC
-	dc.b	"planet remain."
+	dc.b	"this planet remain."
 	dc.b	$FF
 
 ; $25
@@ -489,17 +459,17 @@
 	dc.b	$DA, $02
 	dc.b	$FA
 	dc.b	$65, $01
-	dc.b	"Apparently, a thousand years ago"
+	dc.b	"Apparently,"
 	dc.b	$FC
-	dc.b	"there were ships that could"
+	dc.b	"a thousand years ago"
 	dc.b	$FD
+	dc.b	"there were ships that could"
+	dc.b	$FC
 	dc.b	"travel through space."
 	dc.b	$FD
 	dc.b	"Today, the only thing we can do"
 	dc.b	$FC
-	dc.b	"is view Dezolis through a"
-	dc.b	$FD
-	dc.b	"telescope."
+	dc.b	"is view Dezolis through a telescope."
 	dc.b	$FD
 	dc.b	"Ah! Just once, I would love"
 	dc.b	$FC
@@ -513,17 +483,17 @@
 	dc.b	$FF
 
 ; $27
-	dc.b	"Apparently, a thousand years ago"
+	dc.b	"Apparently,"
 	dc.b	$FC
-	dc.b	"there were ships that could"
+	dc.b	"a thousand years ago"
 	dc.b	$FD
+	dc.b	"there were ships that could"
+	dc.b	$FC
 	dc.b	"travel through space."
 	dc.b	$FD
 	dc.b	"Today, the only thing we can do"
 	dc.b	$FC
-	dc.b	"is view Dezolis through a"
-	dc.b	$FD
-	dc.b	"telescope."
+	dc.b	"is view Dezolis through a telescope."
 	dc.b	$FD
 	dc.b	"Ah! Just once, I would love"
 	dc.b	$FC
@@ -551,11 +521,9 @@
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
-	dc.b	"We have to see the principal"
+	dc.b	"We have to see the principal and get"
 	dc.b	$FC
-	dc.b	"and get the details about this"
-	dc.b	$FD
-	dc.b	"commission."
+	dc.b	"the details about this commission."
 	dc.b	$FF
 
 ; $2A
@@ -675,17 +643,17 @@
 	dc.b	$FD
 	dc.b	"Like the other day, when a group"
 	dc.b	$FC
-	dc.b	"of them jumped into that"
+	dc.b	"of them jumped into that fountain."
 	dc.b	$FD
-	dc.b	"fountain, what a scene!"
+	dc.b	"What a scene!"
 	dc.b	$FD
 	dc.b	"Don't they think about being"
 	dc.b	$FC
 	dc.b	"considerate to others?"
 	dc.b	$FD
-	dc.b	"I wish something could be done"
+	dc.b	"I wish something could"
 	dc.b	$FC
-	dc.b	"about them..."
+	dc.b	"be done about them..."
 	dc.b	$FF
 
 ; $3F
@@ -845,24 +813,16 @@
 	dc.b	$F4
 	dc.b	$02
 	dc.b	"Something smells fishy here."
-	dc.b	$FD
-	dc.b	"That principal was hiding"
 	dc.b	$FC
-	dc.b	"something."
+	dc.b	"That principal was hiding something."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"Maybe he's afraid"
-	dc.b	$FC
-	dc.b	"of the monsters?"
+	dc.b	"Maybe he's afraid of the monsters?"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
-	dc.b	"I think there's more to it than"
+	dc.b	"I think there's more to it than that."
 	dc.b	$FC
-	dc.b	"that."
-	dc.b	$FD
-	dc.b	"Things are starting to get"
-	dc.b	$FC
-	dc.b	"interesting!"
+	dc.b	"Things are starting to get interesting!"
 	dc.b	$FF

@@ -5,9 +5,9 @@
 	dc.b	$FC
 	dc.b	"meteorological instruments."
 	dc.b	$FD
-	dc.b	"Sure makes you feel you're in"
+	dc.b	"Sure makes you feel"
 	dc.b	$FC
-	dc.b	"a campus town."
+	dc.b	"you're in a campus town."
 	dc.b	$FF
 
 ; $1
@@ -47,7 +47,7 @@
 	dc.b	$01
 	dc.b	"There's a notice posted here."
 	dc.b	$FC
-	dc.b	"'No trespassing'"
+	dc.b	$3D, "No trespassing", $3E
 	dc.b	$FF
 
 ; $5
@@ -61,15 +61,13 @@
 	dc.b	$01
 	dc.b	"There's a notice posted here."
 	dc.b	$FC
-	dc.b	"'Do not play on the steps'"
+	dc.b	$3D, "Do not play on the steps", $3E
 	dc.b	$FF
 
 ; $7
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"'The God of Learning -"
-	dc.b	$FC
-	dc.b	"Doctor Lubetz'"
+	dc.b	$3D, "The God of Learning - Doctor Lubetz", $3E
 	dc.b	$FD
 	dc.b	"Hmm... a person from two"
 	dc.b	$FC
@@ -85,17 +83,15 @@
 ; $9
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"A very dusty 20 volume set of"
+	dc.b	"A very dusty 20 volume"
 	dc.b	$FC
-	dc.b	"'Algoian History.'"
+	dc.b	"set of ", $3D, "Algoian History", $3E, "."
 	dc.b	$FF
 
 ; $A
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"The table is cluttered with"
-	dc.b	$FC
-	dc.b	"papers."
+	dc.b	"The table is cluttered with papers."
 	dc.b	$FF
 
 ; $B
@@ -109,35 +105,31 @@
 ; $C
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"A book titled 'Geology Today.'"
+	dc.b	"A book titled ", $3D, "Geology Today", $3E, "."
 	dc.b	$FF
 
 ; $D
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"A book titled 'Literature of"
-	dc.b	$FC
-	dc.b	"Parma.'"
+	dc.b	"A book titled ", $3D, "Literature of Parma", $3E, "."
 	dc.b	$FF
 
 ; $E
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"A book titled 'The Polyglot.'"
+	dc.b	"A book titled ", $3D, "The Polyglot", $3E, "."
 	dc.b	$FF
 
 ; $F
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"There's even a fortune-telling"
-	dc.b	$FC
-	dc.b	"book."
+	dc.b	"There's even a fortune-telling book."
 	dc.b	$FF
 
 ; $10
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"A book titled 'Modernology.'"
+	dc.b	"A book titled ", $3D, "Modernology", $3E, "."
 	dc.b	$FF
 
 ; $11
@@ -161,15 +153,15 @@
 	dc.b	$01
 	dc.b	"Here's a book titled"
 	dc.b	$FC
-	dc.b	"'Heavenly Phenomena.'"
+	dc.b	$3D, "Heavenly Phenomena", $3E, "."
 	dc.b	$FF
 
 ; $14
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"Hmm...'Comets and Observing"
+	dc.b	"Hmm..."
 	dc.b	$FC
-	dc.b	"Them'"
+	dc.b	$3D, "Comets and Observing Them", $3E
 	dc.b	$FD
 	dc.b	"It's an astronomy book."
 	dc.b	$FF
@@ -217,7 +209,7 @@
 	dc.b	$01
 	dc.b	"The book is entitled"
 	dc.b	$FC
-	dc.b	"'Chemical Reagents.'"
+	dc.b	$3D, "Chemical Reagents", $3E, "."
 	dc.b	$FF
 
 ; $1B
@@ -251,9 +243,7 @@
 ; $1F
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"It's an interesting archeology"
-	dc.b	$FC
-	dc.b	"book."
+	dc.b	"It's an interesting archeology book."
 	dc.b	$FF
 
 ; $20
@@ -271,9 +261,9 @@
 ; $22
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"Not one of these books is a"
+	dc.b	"Not one of these"
 	dc.b	$FC
-	dc.b	"schoolbook."
+	dc.b	"books is a schoolbook."
 	dc.b	$FF
 
 ; $23
@@ -313,9 +303,7 @@
 ; $27
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"The cabinet contains cleaning"
-	dc.b	$FC
-	dc.b	"supplies."
+	dc.b	"The cabinet contains cleaning supplies."
 	dc.b	$FF
 
 ; $28
@@ -331,9 +319,7 @@
 	dc.b	$01
 	dc.b	"Wow, amazing!"
 	dc.b	$FD
-	dc.b	"These are all infant-rearing"
-	dc.b	$FC
-	dc.b	"books."
+	dc.b	"These are all infant-rearing books."
 	dc.b	$FF
 
 ; $2A
@@ -387,9 +373,7 @@
 ; $30
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"It says 'The Big Sand Worm"
-	dc.b	$FC
-	dc.b	"Ranch.'"
+	dc.b	"It says ", $3D, "The Big Sand Worm Ranch", $3E, "."
 	dc.b	$FF
 
 ; $31
@@ -397,9 +381,7 @@
 	dc.b	$01
 	dc.b	"It's a jar."
 	dc.b	$FD
-	dc.b	"I wonder if it's used to store"
-	dc.b	$FC
-	dc.b	"water?"
+	dc.b	"I wonder if it's used to store water?"
 	dc.b	$FF
 
 ; $32
@@ -563,17 +545,15 @@
 ; $43
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"'Lessons on How To Make"
+	dc.b	$3D, "Lessons on How To Make Conversation"
 	dc.b	$FC
-	dc.b	"Conversation That Grips"
-	dc.b	$FD
-	dc.b	"People's Hearts '."
+	dc.b	"That Grips People's Hearts.", $3E
 	dc.b	$FF
 
 ; $44
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"'How to Close a Sale.'"
+	dc.b	$3D, "How to Close a Sale.", $3E
 	dc.b	$FC
 	dc.b	"Quite a studious owner."
 	dc.b	$FF
@@ -599,13 +579,9 @@
 	dc.b	$01
 	dc.b	"There's some writing here..."
 	dc.b	$FD
-	dc.b	"Sterilization Treatment"
+	dc.b	"Sterilization Treatment Completed."
 	dc.b	$FC
-	dc.b	"Completed."
-	dc.b	$FD
-	dc.b	"Please follow the line on the"
-	dc.b	$FC
-	dc.b	"floor."
+	dc.b	"Please follow the line on the floor."
 	dc.b	$FF
 
 ; $48
@@ -613,9 +589,7 @@
 	dc.b	$01
 	dc.b	"There's some writing here..."
 	dc.b	$FD
-	dc.b	"'Elevator W3"
-	dc.b	$FC
-	dc.b	" To the West Section'."
+	dc.b	$3D, "Elevator W3-To the West Section", $3E, "."
 	dc.b	$FF
 
 ; $49
@@ -623,9 +597,7 @@
 	dc.b	$01
 	dc.b	"There's some writing here..."
 	dc.b	$FD
-	dc.b	"'Elevator E3"
-	dc.b	$FC
-	dc.b	" To the Central Block'."
+	dc.b	$3D, "Elevator E3 - To the Central Block", $3E, "."
 	dc.b	$FF
 
 ; $4A
@@ -647,11 +619,9 @@
 	dc.b	$01
 	dc.b	"There's some writing here..."
 	dc.b	$FD
-	dc.b	"'West Section  Unauthorized"
+	dc.b	$3D, "West Section - Unauthorized Entry"
 	dc.b	$FC
-	dc.b	"Entry Prohibited Beyond"
-	dc.b	$FD
-	dc.b	"This Point'."
+	dc.b	"Prohibited Beyond This Point", $3E, "."
 	dc.b	$FF
 
 ; $4C
@@ -673,7 +643,7 @@
 ; $4E
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"'The History of Motavia'."
+	dc.b	$3D, "The History of Motavia", $3E, "."
 	dc.b	$FC
 	dc.b	"Wow, it sure looks difficult!"
 	dc.b	$FF
@@ -681,13 +651,13 @@
 ; $4F
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"'Spelling Made Easy'..."
+	dc.b	$3D, "Spelling Made Easy", $3E, "..."
 	dc.b	$FF
 
 ; $50
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"'One Plus One Is'..."
+	dc.b	$3D, "One Plus One Is", $3E, "..."
 	dc.b	$FC
 	dc.b	"How cute!"
 	dc.b	$FF
@@ -697,15 +667,15 @@
 	dc.b	$01
 	dc.b	"Today's words of wisdom..."
 	dc.b	$FC
-	dc.b	"'One Good Conduct Per Day'."
+	dc.b	$3D, "One Good Conduct Per Day", $3E, "."
 	dc.b	$FF
 
 ; $52
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"Wow, It's an authentic"
+	dc.b	"Wow!"
 	dc.b	$FC
-	dc.b	"blackboard."
+	dc.b	"It's an authentic blackboard."
 	dc.b	$FF
 
 ; $53
@@ -713,13 +683,17 @@
 	dc.b	$42, $01
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"'On Duty Today  Gregson'"
+	dc.b	$3D, "On Duty Today"
+	dc.b	$FC
+	dc.b	"  Gregson", $3E
 	dc.b	$FF
 
 ; $54
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"'On Duty Today  Hopkins'"
+	dc.b	$3D, "On Duty Today"
+	dc.b	$FC
+	dc.b	"  Hopkins", $3E
 	dc.b	$FF
 
 ; $55
@@ -727,9 +701,7 @@
 	dc.b	$01
 	dc.b	"It's a children's picture book."
 	dc.b	$FD
-	dc.b	"'Spoiled Rabbit of the"
-	dc.b	$FC
-	dc.b	"Prairies'..."
+	dc.b	$3D, "Spoiled Rabbit of the Prairies", $3E, "..."
 	dc.b	$FF
 
 ; $56
@@ -737,9 +709,9 @@
 	dc.b	$01
 	dc.b	"Look at this picture book."
 	dc.b	$FD
-	dc.b	"'The Eight Armed Ant and the"
+	dc.b	$3D, "The Eight Armed Ant and the"
 	dc.b	$FC
-	dc.b	"Six-legged Spider'..."
+	dc.b	"Six-legged Spider", $3E, "..."
 	dc.b	$FF
 
 ; $57
@@ -747,7 +719,7 @@
 	dc.b	$01
 	dc.b	"It's a children's picture book."
 	dc.b	$FC
-	dc.b	"'The Golden Axe  Volume 3'..."
+	dc.b	$3D, "The Golden Axe  Volume 3", $3E, "..."
 	dc.b	$FF
 
 ; $58
@@ -755,7 +727,7 @@
 	dc.b	$01
 	dc.b	"Look at this picture book."
 	dc.b	$FC
-	dc.b	"'The Ceramic Soldiers'..."
+	dc.b	$3D, "The Ceramic Soldiers", $3E, "..."
 	dc.b	$FF
 
 ; $59
@@ -763,7 +735,7 @@
 	dc.b	$01
 	dc.b	"It's a children's picture book."
 	dc.b	$FC
-	dc.b	"'The Bare Queen'..."
+	dc.b	$3D, "The Bare Queen", $3E, "..."
 	dc.b	$FF
 
 ; $5A
@@ -771,7 +743,7 @@
 	dc.b	$01
 	dc.b	"Look at this picture book."
 	dc.b	$FC
-	dc.b	"'A Day with Ecco.'"
+	dc.b	$3D, "A Day with Ecco.", $3E
 	dc.b	$FF
 
 ; $5B
@@ -779,9 +751,7 @@
 	dc.b	$01
 	dc.b	"Look at this picture book."
 	dc.b	$FD
-	dc.b	"'Biography of the Great"
-	dc.b	$FC
-	dc.b	"Professor Lubetz'"
+	dc.b	$3D, "Biography of the Great Professor Lubetz", $3E
 	dc.b	$FF
 
 ; $5C
@@ -789,7 +759,7 @@
 	dc.b	$01
 	dc.b	"It's a children's picture book."
 	dc.b	$FC
-	dc.b	"'Run, Hedgehog, Run!'..."
+	dc.b	$3D, "Run, Hedgehog, Run!", $3E, "..."
 	dc.b	$FF
 
 ; $5D
@@ -811,13 +781,13 @@
 ; $5F
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"This one here looks like a"
+	dc.b	"This one here looks"
 	dc.b	$FC
-	dc.b	"difficult book."
+	dc.b	"like a difficult book."
 	dc.b	$FD
-	dc.b	"Hmm... 'Motavia: The Present and"
+	dc.b	"Hmm..."
 	dc.b	$FC
-	dc.b	"Future'..."
+	dc.b	$3D, "Motavia: The Present and Future", $3E, "..."
 	dc.b	$FF
 
 ; $60
@@ -825,7 +795,7 @@
 	dc.b	$01
 	dc.b	"Hello, what's this...?"
 	dc.b	$FD
-	dc.b	"'How to Love and To Be Loved'"
+	dc.b	$3D, "How to Love and To Be Loved", $3E
 	dc.b	$FC
 	dc.b	"...Wow!"
 	dc.b	$FF
@@ -885,9 +855,9 @@
 ; $65
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"The cupboard is full of orange"
+	dc.b	"The cupboard is full"
 	dc.b	$FC
-	dc.b	"soda."
+	dc.b	"of orange soda."
 	dc.b	$FF
 
 ; $66

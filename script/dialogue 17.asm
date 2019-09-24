@@ -748,9 +748,9 @@
 	dc.b	$FC
 	dc.b	"you joined the Hunters Guild."
 	dc.b	$FD
-	dc.b	"You'd better put your heart"
+	dc.b	"You'd better put"
 	dc.b	$FC
-	dc.b	"into it!"
+	dc.b	"your heart into it!"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$01
@@ -772,11 +772,9 @@
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
-	dc.b	"It's a bit far."
+	dc.b	"It's a bit far. We're going to"
 	dc.b	$FC
-	dc.b	"We're going to Motavia Academy"
-	dc.b	$FD
-	dc.b	"in the town of Piata."
+	dc.b	"Motavia Academy in the town of Piata."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$01
@@ -790,7 +788,7 @@
 	dc.b	$02
 	dc.b	"Who knows? The message said"
 	dc.b	$FC
-	dc.b	"'Just come.'"
+	dc.b	$3D, "Just come", $3E, "."
 	dc.b	$FD
 	dc.b	"We'll get the details"
 	dc.b	$FC
@@ -800,19 +798,17 @@
 ; $39
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"Since we're going to be there"
+	dc.b	"Since we're going to be there anyway,"
 	dc.b	$FC
-	dc.b	"anyway, I'd sure like to tour"
-	dc.b	$FD
-	dc.b	"the Academy."
+	dc.b	"I'd sure like to tour the Academy."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
 	dc.b	"Is that all you can think about?"
 	dc.b	$FD
-	dc.b	"Get moving or I'll leave you"
+	dc.b	"Get moving or I'll"
 	dc.b	$FC
-	dc.b	"behind!"
+	dc.b	"leave you behind!"
 	dc.b	$FF
 
 ; $3A

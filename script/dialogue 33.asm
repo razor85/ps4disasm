@@ -24,9 +24,9 @@
 ; $1
 	dc.b	$F4
 	dc.b	$0E
-	dc.b	"Oh Hahn, don't bother"
+	dc.b	"Oh Hahn,"
 	dc.b	$FC
-	dc.b	"these people."
+	dc.b	"don't bother these people."
 	dc.b	$FF
 
 ; $2
@@ -189,11 +189,9 @@
 	dc.b	$F3
 	dc.b	$F4
 	dc.b	$03
-	dc.b	"Ahh! I wonder what kind of"
+	dc.b	"Ahh! I wonder what kind of person this"
 	dc.b	$FC
-	dc.b	"person this hunter is that"
-	dc.b	$FD
-	dc.b	"the principal commissioned?"
+	dc.b	"hunter is that the principal commissioned?"
 	dc.b	$FD
 	dc.b	"It would be nice if he's a"
 	dc.b	$FC
@@ -209,15 +207,11 @@
 ; $11
 	dc.b	$F4
 	dc.b	$03
-	dc.b	"What? You're the hunters?"
-	dc.b	$FC
-	dc.b	"Really?"
+	dc.b	"What? You're the hunters? Really?"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
-	dc.b	"You don't think we can do the"
-	dc.b	$FC
-	dc.b	"job?"
+	dc.b	"You don't think we can do the job?"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$03
@@ -246,17 +240,15 @@
 	dc.b	$F4
 	dc.b	$03
 	dc.b	"My name is Hahn."
-	dc.b	$FD
-	dc.b	"I am an assistant at this"
 	dc.b	$FC
-	dc.b	"academy."
+	dc.b	"I am an assistant at this academy."
 	dc.b	$FD
 	dc.b	"I work for professor Holt,"
 	dc.b	$FC
 	dc.b	"who has gone to investigate"
 	dc.b	$FD
 	dc.b	"Birth Valley for his research."
-	dc.b	$FD
+	dc.b	$FC
 	dc.b	"We haven't heard from him since."
 	dc.b	$FD
 	dc.b	"So, now I am searching for"
@@ -266,65 +258,51 @@
 	dc.b	$F4
 	dc.b	$01
 	dc.b	"Birth Valley..."
-	dc.b	$FC
-	dc.b	"that's that mysterious place"
 	dc.b	$FD
-	dc.b	"that has been called"
+	dc.b	"That's that mysterious place that has"
 	dc.b	$FC
-	dc.b	"the sacred valley of life."
+	dc.b	"been called the sacred valley of life."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
-	dc.b	"But what's the connection"
+	dc.b	"But what's the connection between the"
 	dc.b	$FC
-	dc.b	"between the valley and this"
-	dc.b	$FD
-	dc.b	"current monster scare?"
+	dc.b	"valley and this current monster scare?"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$03
-	dc.b	"After the investigation team,"
+	dc.b	"After the investigation team, led by the"
 	dc.b	$FC
-	dc.b	"led by the professor, was"
+	dc.b	"professor, was reported missing."
 	dc.b	$FD
-	dc.b	"reported missing, the principal"
+	dc.b	"The principal barred everyone"
 	dc.b	$FC
-	dc.b	"barred everyone from entering"
-	dc.b	$FD
-	dc.b	"Birth Valley!"
+	dc.b	"from entering Birth Valley!"
 	dc.b	$FD
 	dc.b	"We're trying to get information"
 	dc.b	$FC
-	dc.b	"as to what's going on, but "
+	dc.b	"as to what's going on,"
 	dc.b	$FD
-	dc.b	"he keeps evading the issue."
-	dc.b	$FD
-	dc.b	"And then this monster scare"
+	dc.b	"but he keeps evading the issue."
 	dc.b	$FC
-	dc.b	"begins!"
+	dc.b	"And then this monster scare begins!"
 	dc.b	$FD
-	dc.b	"I'll bet anything that"
+	dc.b	"I'll bet anything that there is some sort"
 	dc.b	$FC
-	dc.b	"there is some sort of connection"
-	dc.b	$FD
-	dc.b	"between these incidents."
+	dc.b	"of connection between these incidents."
 	dc.b	$FD
 	dc.b	$F2, $01
 	dc.b	$F4
 	dc.b	$02
-	dc.b	"Well it's true that"
+	dc.b	"Well it's true that there is something"
 	dc.b	$FC
-	dc.b	"there is something fishy"
-	dc.b	$FD
-	dc.b	"about the principal's behavior."
+	dc.b	"fishy about the principal's behavior."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$03
-	dc.b	"Given the circumstances,"
+	dc.b	"Given the circumstances, I feel compelled"
 	dc.b	$FC
-	dc.b	"I feel compelled to investigate"
-	dc.b	$FD
-	dc.b	"the basement myself."
+	dc.b	"to investigate the basement myself."
 	dc.b	$FD
 	dc.b	"But come to think of it,"
 	dc.b	$FC
@@ -360,9 +338,7 @@
 	dc.b	$FD
 	dc.b	"I hope you weren't thinking of"
 	dc.b	$FC
-	dc.b	"asking to tag along with us"
-	dc.b	$FD
-	dc.b	"for free?"
+	dc.b	"asking to tag along with us for free?"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$03
@@ -773,13 +749,11 @@
 	dc.b	$0E
 	dc.b	"Welcome."
 	dc.b	$FD
-	dc.b	"I'm the principal of this"
-	dc.b	$FC
-	dc.b	"academy."
+	dc.b	"I'm the principal of this academy."
 	dc.b	$FD
-	dc.b	"Let's see, you must be Alys,"
+	dc.b	"Let's see,"
 	dc.b	$FC
-	dc.b	"the hunter,"
+	dc.b	"you must be Alys, the hunter,"
 	dc.b	$FD
 	dc.b	"and you are her assistant, Chaz."
 	dc.b	$FD
@@ -799,11 +773,9 @@
 	dc.b	$FD
 	dc.b	$F2, $00
 	dc.w	$0002
-	dc.b	"About a month ago..."
+	dc.b	"About a month ago, mysterious monsters"
 	dc.b	$FC
-	dc.b	"Mysterious monsters started to"
-	dc.b	$FD
-	dc.b	"appear within this academy!"
+	dc.b	"started to appear within this academy!"
 	dc.b	$FD
 	dc.b	"It appears that they have made"
 	dc.b	$FC
@@ -811,19 +783,17 @@
 	dc.b	$FD
 	dc.b	"I've since closed it off."
 	dc.b	$FD
-	dc.b	"So far no one's been hurt, but"
+	dc.b	"So far no one's been hurt, but who"
 	dc.b	$FC
-	dc.b	"who knows when they'll appear"
+	dc.b	"knows when they'll appear again?"
 	dc.b	$FD
-	dc.b	"again?"
-	dc.b	$FD
-	dc.b	"Please, I beg you to destroy all"
+	dc.b	"Please, I beg you to"
 	dc.b	$FC
-	dc.b	"those creatures!"
+	dc.b	"destroy all those creatures!"
 	dc.b	$FD
-	dc.b	"Ah... I'd like to settle this"
+	dc.b	"Ah... I'd like to settle"
 	dc.b	$FC
-	dc.b	"matter discreetly,"
+	dc.b	"this matter discreetly."
 	dc.b	$FD
 	dc.b	"I'm counting on your"
 	dc.b	$FC
@@ -833,15 +803,15 @@
 	dc.b	$02
 	dc.b	"No problem. You can rely on us."
 	dc.b	$FD
-	dc.b	"Although, it's strange that all"
+	dc.b	"Although, it's strange"
 	dc.b	$FC
-	dc.b	"those monsters suddenly"
+	dc.b	"that all those monsters"
 	dc.b	$FD
-	dc.b	"appeared in this academy."
+	dc.b	"suddenly appeared in this academy."
 	dc.b	$FD
-	dc.b	"Usually monsters don't come into"
+	dc.b	"Usually monsters don't"
 	dc.b	$FC
-	dc.b	"inhabited areas."
+	dc.b	"come into inhabited areas."
 	dc.b	$FD
 	dc.b	"Do you have any idea"
 	dc.b	$FC
@@ -867,5 +837,7 @@
 ; $18
 	dc.b	$F4
 	dc.b	$0E
-	dc.b	"Good luck. I'm counting on you."
+	dc.b	"Good luck."
+	dc.b	$FC
+	dc.b	"I'm counting on you."
 	dc.b	$FF
