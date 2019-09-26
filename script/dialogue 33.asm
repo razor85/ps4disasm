@@ -371,9 +371,9 @@
 
 	dc.b	$F4
 	dc.b	$01
-	dc.b	"What? But we destroyed the"
+	dc.b	"What?"
 	dc.b	$FC
-	dc.b	"monster..."
+	dc.b	"But we destroyed the monster..."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
@@ -396,9 +396,7 @@
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02
-	dc.b	"What are these glass containers"
-	dc.b	$FC
-	dc.b	"for?"
+	dc.b	"What are these glass containers for?"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$03
@@ -410,19 +408,17 @@
 	dc.b	$FC
 	dc.b	"breeding monsters here?"
 	dc.b	$FD
-	dc.b	"If that's the case,"
-	dc.b	$FD
-	dc.b	"this monster business is"
+	dc.b	"If that's the case, this monster"
 	dc.b	$FC
-	dc.b	"no mystery after all!"
+	dc.b	"business is no mystery after all!"
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$03
 	dc.b	"I...I don't know anything!"
 	dc.b	$FD
-	dc.b	"It's the first time I've been"
+	dc.b	"It's the first time"
 	dc.b	$FC
-	dc.b	"in this room!"
+	dc.b	"I've been in this room!"
 	dc.b	$FD
 	dc.b	"I've only just learned that such"
 	dc.b	$FC
@@ -450,11 +446,9 @@
 	dc.b	$01
 	dc.b	"He must also know the"
 	dc.b	$FC
-	dc.b	"connection between this"
+	dc.b	"connection between this and the"
 	dc.b	$FD
-	dc.b	"and the disappearance of"
-	dc.b	$FC
-	dc.b	"Professor Holt."
+	dc.b	"disappearance of Professor Holt."
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02

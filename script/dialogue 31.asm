@@ -71,9 +71,9 @@
 	dc.b	$FD
 	dc.b	$F4
 	dc.b	$02, $01
-	dc.b	"I'm going to make the principal"
+	dc.b	"I'm going to make the"
 	dc.b	$FC
-	dc.b	"tell us!"
+	dc.b	"principal tell us!"
 	dc.b	$FD
 	dc.b	"Hey, you!"
 	dc.b	$FC

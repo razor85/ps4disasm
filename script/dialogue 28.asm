@@ -342,10 +342,8 @@
 	dc.b	$F4
 	dc.b	$01
 	dc.b	"Look at all this dust!"
-	dc.b	$FD
-	dc.b	"I can't read the titles on"
 	dc.b	$FC
-	dc.b	"these books."
+	dc.b	"I can't read the titles on these books."
 	dc.b	$FF
 
 ; $2D
