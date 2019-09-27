@@ -2354,7 +2354,8 @@ Macro_Data = ramaddr($FFFFF444)	; 8 slots for the Macro data; each slot takes up
 								;   Byte 3 = Technique, Skill or Item ID; 0 when command chosen is attack or defense
 								;   Byte 4 = empty; most likely included for alignment purposes; can be used to store other data
 
-Color_index = ramaddr($FFFFF4FC)
+Current_Win_Color = ramaddr($FFFFF4FA)
+Color_Index = ramaddr($FFFFF4FC)
 
 Character_Stats = ramaddr($FFFFF500)
 Chaz_Stats = ramaddr($FFFFF500)
