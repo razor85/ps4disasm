@@ -398,9 +398,9 @@ for fname in remainder:
 			print("backing up", bindest, "to", bindest2)
 			bindest.rename(bindest2)
 		subprocess.run(['../compressors/koscmp', str(dest.resolve(strict=True)), str(bindest.resolve())])
-		# pad to 16 bytes -- Not needed anymore because it's handled in the disassembly now
-		#with open(bindest, "r+b") as f:
-		#	f.seek(0, io.SEEK_END)
-		#	sz = f.tell()
-		#	if sz % 16 != 0:
-		#		f.write(bytes(16 - sz%16))
+		# pad to 16 bytes
+		with open(bindest, "r+b") as f:
+			f.seek(0, io.SEEK_END)
+			sz = f.tell()
+			if sz % 16 != 0:
+				f.write(bytes(16 - sz%16))
