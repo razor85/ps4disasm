@@ -38,6 +38,7 @@ REM // done -- pause if we seem to have failed, then exit
 IF NOT EXIST ps4.p goto LABLPAUSE
 IF NOT EXIST ps4built.bin goto LABLPAUSE
 fixheader ps4built.bin
+copy ps4built.bin PhantasyStarIV_Newcomers.bin
 exit /b
 :LABLPAUSE
 
